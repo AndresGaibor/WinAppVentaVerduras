@@ -84,6 +84,7 @@ namespace WinAppDiseños
             pictureBox5.Size = new Size(width: 124, height: 111);
             panel5.Visible = false; 
         }
+
         //LLamo al forms donde esta las opciones de productos(verduras)
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -92,6 +93,11 @@ namespace WinAppDiseños
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
