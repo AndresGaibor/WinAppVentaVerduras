@@ -65,5 +65,11 @@ namespace WinAppDiseños
         {
             panel5.Visible = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Ingreso llamaringreso = new Ingreso();  
+            llamaringreso.ShowDialog(); 
+        }
     }
 }
