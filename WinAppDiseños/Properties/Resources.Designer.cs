@@ -83,6 +83,16 @@ namespace WinAppDiseños.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BuscarP {
+            get {
+                object obj = ResourceManager.GetObject("BuscarP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -106,6 +116,16 @@ namespace WinAppDiseños.Properties {
         internal static System.Drawing.Bitmap Contrasena {
             get {
                 object obj = ResourceManager.GetObject("Contrasena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EliminarP {
+            get {
+                object obj = ResourceManager.GetObject("EliminarP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +173,16 @@ namespace WinAppDiseños.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IngresarP {
+            get {
+                object obj = ResourceManager.GetObject("IngresarP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -166,6 +196,16 @@ namespace WinAppDiseños.Properties {
         internal static System.Drawing.Bitmap logom {
             get {
                 object obj = ResourceManager.GetObject("logom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ModificarP {
+            get {
+                object obj = ResourceManager.GetObject("ModificarP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
