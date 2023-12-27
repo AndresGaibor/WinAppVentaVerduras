@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WinAppDiseños
 {
-    public partial class Buscar : Form
+    public partial class Mostrar : Form
     {
-        public Buscar()
+        public Mostrar()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
             this.Close();
         }

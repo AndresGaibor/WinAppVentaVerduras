@@ -71,5 +71,28 @@ namespace WinAppDiseños
             Ingreso llamaringreso = new Ingreso();  
             llamaringreso.ShowDialog(); 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Buscar llamar = new Buscar();   
+            llamar.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Buscar_editar llamarbus = new Buscar_editar();
+            llamarbus.ShowDialog(); 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Buscar_eliminar llamarelimi = new Buscar_eliminar();    
+            llamarelimi.ShowDialog();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

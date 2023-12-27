@@ -24,7 +24,7 @@ namespace WinAppDiseños {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private EstudiantesDataTable tableEstudiantes;
+        private VerdurasDataTable tableVerduras;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace WinAppDiseños {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Estudiantes"] != null)) {
-                    base.Tables.Add(new EstudiantesDataTable(ds.Tables["Estudiantes"]));
+                if ((ds.Tables["Verduras"] != null)) {
+                    base.Tables.Add(new VerdurasDataTable(ds.Tables["Verduras"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WinAppDiseños {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EstudiantesDataTable Estudiantes {
+        public VerdurasDataTable Verduras {
             get {
-                return this.tableEstudiantes;
+                return this.tableVerduras;
             }
         }
         
@@ -152,8 +152,8 @@ namespace WinAppDiseños {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Estudiantes"] != null)) {
-                    base.Tables.Add(new EstudiantesDataTable(ds.Tables["Estudiantes"]));
+                if ((ds.Tables["Verduras"] != null)) {
+                    base.Tables.Add(new VerdurasDataTable(ds.Tables["Verduras"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WinAppDiseños {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEstudiantes = ((EstudiantesDataTable)(base.Tables["Estudiantes"]));
+            this.tableVerduras = ((VerdurasDataTable)(base.Tables["Verduras"]));
             if ((initTable == true)) {
-                if ((this.tableEstudiantes != null)) {
-                    this.tableEstudiantes.InitVars();
+                if ((this.tableVerduras != null)) {
+                    this.tableVerduras.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace WinAppDiseños {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEstudiantes = new EstudiantesDataTable();
-            base.Tables.Add(this.tableEstudiantes);
+            this.tableVerduras = new VerdurasDataTable();
+            base.Tables.Add(this.tableVerduras);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeEstudiantes() {
+        private bool ShouldSerializeVerduras() {
             return false;
         }
         
@@ -270,23 +270,29 @@ namespace WinAppDiseños {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void EstudiantesRowChangeEventHandler(object sender, EstudiantesRowChangeEvent e);
+        public delegate void VerdurasRowChangeEventHandler(object sender, VerdurasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EstudiantesDataTable : global::System.Data.TypedTableBase<EstudiantesRow> {
+        public partial class VerdurasDataTable : global::System.Data.TypedTableBase<VerdurasRow> {
             
-            private global::System.Data.DataColumn columnCodigo;
+            private global::System.Data.DataColumn columncodigo;
             
-            private global::System.Data.DataColumn columnNombre;
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columndistribuidora;
+            
+            private global::System.Data.DataColumn columnprecio;
+            
+            private global::System.Data.DataColumn columnstock;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesDataTable() {
-                this.TableName = "Estudiantes";
+            public VerdurasDataTable() {
+                this.TableName = "Verduras";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +300,7 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal EstudiantesDataTable(global::System.Data.DataTable table) {
+            internal VerdurasDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +317,48 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected EstudiantesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected VerdurasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CodigoColumn {
+            public global::System.Data.DataColumn codigoColumn {
                 get {
-                    return this.columnCodigo;
+                    return this.columncodigo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
+            public global::System.Data.DataColumn nombreColumn {
                 get {
-                    return this.columnNombre;
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn distribuidoraColumn {
+                get {
+                    return this.columndistribuidora;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn precioColumn {
+                get {
+                    return this.columnprecio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn stockColumn {
+                get {
+                    return this.columnstock;
                 }
             }
             
@@ -343,46 +373,49 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesRow this[int index] {
+            public VerdurasRow this[int index] {
                 get {
-                    return ((EstudiantesRow)(this.Rows[index]));
+                    return ((VerdurasRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstudiantesRowChangeEventHandler EstudiantesRowChanging;
+            public event VerdurasRowChangeEventHandler VerdurasRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstudiantesRowChangeEventHandler EstudiantesRowChanged;
+            public event VerdurasRowChangeEventHandler VerdurasRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstudiantesRowChangeEventHandler EstudiantesRowDeleting;
+            public event VerdurasRowChangeEventHandler VerdurasRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstudiantesRowChangeEventHandler EstudiantesRowDeleted;
+            public event VerdurasRowChangeEventHandler VerdurasRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddEstudiantesRow(EstudiantesRow row) {
+            public void AddVerdurasRow(VerdurasRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesRow AddEstudiantesRow(string Codigo, string Nombre) {
-                EstudiantesRow rowEstudiantesRow = ((EstudiantesRow)(this.NewRow()));
+            public VerdurasRow AddVerdurasRow(string codigo, string nombre, string distribuidora, string precio, string stock) {
+                VerdurasRow rowVerdurasRow = ((VerdurasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Codigo,
-                        Nombre};
-                rowEstudiantesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEstudiantesRow);
-                return rowEstudiantesRow;
+                        codigo,
+                        nombre,
+                        distribuidora,
+                        precio,
+                        stock};
+                rowVerdurasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVerdurasRow);
+                return rowVerdurasRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EstudiantesDataTable cln = ((EstudiantesDataTable)(base.Clone()));
+                VerdurasDataTable cln = ((VerdurasDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,49 +423,58 @@ namespace WinAppDiseños {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EstudiantesDataTable();
+                return new VerdurasDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCodigo = base.Columns["Codigo"];
-                this.columnNombre = base.Columns["Nombre"];
+                this.columncodigo = base.Columns["codigo"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columndistribuidora = base.Columns["distribuidora"];
+                this.columnprecio = base.Columns["precio"];
+                this.columnstock = base.Columns["stock"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCodigo);
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columndistribuidora = new global::System.Data.DataColumn("distribuidora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndistribuidora);
+                this.columnprecio = new global::System.Data.DataColumn("precio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprecio);
+                this.columnstock = new global::System.Data.DataColumn("stock", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstock);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesRow NewEstudiantesRow() {
-                return ((EstudiantesRow)(this.NewRow()));
+            public VerdurasRow NewVerdurasRow() {
+                return ((VerdurasRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EstudiantesRow(builder);
+                return new VerdurasRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EstudiantesRow);
+                return typeof(VerdurasRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EstudiantesRowChanged != null)) {
-                    this.EstudiantesRowChanged(this, new EstudiantesRowChangeEvent(((EstudiantesRow)(e.Row)), e.Action));
+                if ((this.VerdurasRowChanged != null)) {
+                    this.VerdurasRowChanged(this, new VerdurasRowChangeEvent(((VerdurasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -440,8 +482,8 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EstudiantesRowChanging != null)) {
-                    this.EstudiantesRowChanging(this, new EstudiantesRowChangeEvent(((EstudiantesRow)(e.Row)), e.Action));
+                if ((this.VerdurasRowChanging != null)) {
+                    this.VerdurasRowChanging(this, new VerdurasRowChangeEvent(((VerdurasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -449,8 +491,8 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EstudiantesRowDeleted != null)) {
-                    this.EstudiantesRowDeleted(this, new EstudiantesRowChangeEvent(((EstudiantesRow)(e.Row)), e.Action));
+                if ((this.VerdurasRowDeleted != null)) {
+                    this.VerdurasRowDeleted(this, new VerdurasRowChangeEvent(((VerdurasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -458,14 +500,14 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EstudiantesRowDeleting != null)) {
-                    this.EstudiantesRowDeleting(this, new EstudiantesRowChangeEvent(((EstudiantesRow)(e.Row)), e.Action));
+                if ((this.VerdurasRowDeleting != null)) {
+                    this.VerdurasRowDeleting(this, new VerdurasRowChangeEvent(((VerdurasRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveEstudiantesRow(EstudiantesRow row) {
+            public void RemoveVerdurasRow(VerdurasRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -492,7 +534,7 @@ namespace WinAppDiseños {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EstudiantesDataTable";
+                attribute2.FixedValue = "VerdurasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -536,71 +578,155 @@ namespace WinAppDiseños {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EstudiantesRow : global::System.Data.DataRow {
+        public partial class VerdurasRow : global::System.Data.DataRow {
             
-            private EstudiantesDataTable tableEstudiantes;
+            private VerdurasDataTable tableVerduras;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal EstudiantesRow(global::System.Data.DataRowBuilder rb) : 
+            internal VerdurasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEstudiantes = ((EstudiantesDataTable)(this.Table));
+                this.tableVerduras = ((VerdurasDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Codigo {
+            public string codigo {
                 get {
                     try {
-                        return ((string)(this[this.tableEstudiantes.CodigoColumn]));
+                        return ((string)(this[this.tableVerduras.codigoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Codigo\' de la tabla \'Estudiantes\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'Verduras\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstudiantes.CodigoColumn] = value;
+                    this[this.tableVerduras.codigoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Nombre {
+            public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableEstudiantes.NombreColumn]));
+                        return ((string)(this[this.tableVerduras.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'Estudiantes\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Verduras\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstudiantes.NombreColumn] = value;
+                    this[this.tableVerduras.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCodigoNull() {
-                return this.IsNull(this.tableEstudiantes.CodigoColumn);
+            public string distribuidora {
+                get {
+                    try {
+                        return ((string)(this[this.tableVerduras.distribuidoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'distribuidora\' de la tabla \'Verduras\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVerduras.distribuidoraColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCodigoNull() {
-                this[this.tableEstudiantes.CodigoColumn] = global::System.Convert.DBNull;
+            public string precio {
+                get {
+                    try {
+                        return ((string)(this[this.tableVerduras.precioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precio\' de la tabla \'Verduras\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVerduras.precioColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNombreNull() {
-                return this.IsNull(this.tableEstudiantes.NombreColumn);
+            public string stock {
+                get {
+                    try {
+                        return ((string)(this[this.tableVerduras.stockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'stock\' de la tabla \'Verduras\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVerduras.stockColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNombreNull() {
-                this[this.tableEstudiantes.NombreColumn] = global::System.Convert.DBNull;
+            public bool IscodigoNull() {
+                return this.IsNull(this.tableVerduras.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tableVerduras.codigoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableVerduras.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tableVerduras.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdistribuidoraNull() {
+                return this.IsNull(this.tableVerduras.distribuidoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdistribuidoraNull() {
+                this[this.tableVerduras.distribuidoraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsprecioNull() {
+                return this.IsNull(this.tableVerduras.precioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetprecioNull() {
+                this[this.tableVerduras.precioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsstockNull() {
+                return this.IsNull(this.tableVerduras.stockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetstockNull() {
+                this[this.tableVerduras.stockColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -608,22 +734,22 @@ namespace WinAppDiseños {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class EstudiantesRowChangeEvent : global::System.EventArgs {
+        public class VerdurasRowChangeEvent : global::System.EventArgs {
             
-            private EstudiantesRow eventRow;
+            private VerdurasRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesRowChangeEvent(EstudiantesRow row, global::System.Data.DataRowAction action) {
+            public VerdurasRowChangeEvent(VerdurasRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstudiantesRow Row {
+            public VerdurasRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinAppDiseños
 {
-    public partial class Buscar : Form
+    public partial class Buscar_editar : Form
     {
-        public Buscar()
+        public Buscar_editar()
         {
             InitializeComponent();
         }

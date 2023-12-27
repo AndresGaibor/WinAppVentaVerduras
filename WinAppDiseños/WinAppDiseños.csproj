@@ -52,6 +52,18 @@
     <Compile Include="Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buscar_editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar_editar.Designer.cs">
+      <DependentUpon>Buscar_editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar_eliminar.Designer.cs">
+      <DependentUpon>Buscar_eliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cedula.cs" />
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -79,6 +91,12 @@
     <Compile Include="MenuProductos.Designer.cs">
       <DependentUpon>MenuProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mostrar.Designer.cs">
+      <DependentUpon>Mostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pagina_principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +114,12 @@
     <EmbeddedResource Include="Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buscar_editar.resx">
+      <DependentUpon>Buscar_editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar_eliminar.resx">
+      <DependentUpon>Buscar_eliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProductos.resx">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mostrar.resx">
+      <DependentUpon>Mostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagina_principal.resx">
       <DependentUpon>Pagina_principal.cs</DependentUpon>
@@ -213,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retroceder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

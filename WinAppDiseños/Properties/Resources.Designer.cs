@@ -263,6 +263,16 @@ namespace WinAppDiseños.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap retroceder {
+            get {
+                object obj = ResourceManager.GetObject("retroceder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Soporte {
             get {
                 object obj = ResourceManager.GetObject("Soporte", resourceCulture);
