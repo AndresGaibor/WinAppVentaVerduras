@@ -95,5 +95,11 @@ namespace WinAppDiseños
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MostarReporte mr = new MostarReporte();
+            mr.Show();
+        }
     }
 }

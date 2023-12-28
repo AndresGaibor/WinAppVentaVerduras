@@ -87,6 +87,12 @@
     <Compile Include="MenuProductos.Designer.cs">
       <DependentUpon>MenuProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostarReporte.Designer.cs">
+      <DependentUpon>MostarReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pagina_principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProductos.resx">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostarReporte.resx">
+      <DependentUpon>MostarReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagina_principal.resx">
       <DependentUpon>Pagina_principal.cs</DependentUpon>

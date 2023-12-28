@@ -65,5 +65,11 @@ namespace WinAppDiseños
         {
             panel5.Visible = false;
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }
