@@ -32,10 +32,10 @@ namespace WinAppDiseños
             dataSet11.ReadXml("C:\\xml\\Inventario.xml");
             object[] vect = new object[5];
             vect[0] = null;
-            vect[1] = textBox1.Text;
-            vect[2] = textBox3.Text;
-            vect[3] = Convert.ToDouble(textBox2.Text);
-            vect[4] = textBox4.Text;
+            vect[1] = textBox1.Text.Trim();
+            vect[2] = textBox3.Text.Trim();
+            vect[3] = Convert.ToDouble(textBox2.Text.Replace('.',','));
+            vect[4] = textBox4.Text.Trim();
             dataSet11.Verdura.Rows.Add(vect);
             dataSet11.WriteXml("C:\\xml\\Inventario.xml");
             MessageBox.Show("Producto agregado correctamente");
