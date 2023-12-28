@@ -34,11 +34,13 @@ namespace WinAppDiseños
             vect[0] = null;
             vect[1] = textBox1.Text;
             vect[2] = textBox3.Text;
-            vect[3] = textBox2.Text;
+            vect[3] = Convert.ToDouble(textBox2.Text);
             vect[4] = textBox4.Text;
             dataSet11.Verdura.Rows.Add(vect);
             dataSet11.WriteXml("C:\\xml\\Inventario.xml");
             MessageBox.Show("Producto agregado correctamente");
+            this.Close();
+
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
