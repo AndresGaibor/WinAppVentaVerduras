@@ -75,17 +75,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 72);
+            this.panel1.Size = new System.Drawing.Size(1600, 138);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WinAppDiseños.Properties.Resources.retroceder;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -95,9 +97,10 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WinAppDiseños.Properties.Resources.BuscarP;
-            this.pictureBox3.Location = new System.Drawing.Point(710, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(1420, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 66);
+            this.pictureBox3.Size = new System.Drawing.Size(130, 127);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
@@ -106,18 +109,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lato", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 20);
+            this.label2.Location = new System.Drawing.Point(386, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(432, 33);
+            this.label2.Size = new System.Drawing.Size(861, 64);
             this.label2.TabIndex = 11;
             this.label2.Text = "EcoVerde Market - Buscar Verduras";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
-            this.pictureBox6.Location = new System.Drawing.Point(841, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(1682, 6);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 62);
+            this.pictureBox6.Size = new System.Drawing.Size(130, 119);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
@@ -126,25 +131,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 20);
+            this.label1.Location = new System.Drawing.Point(64, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 57);
             this.label1.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 172);
+            this.textBox1.Location = new System.Drawing.Point(478, 331);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
+            this.textBox1.Size = new System.Drawing.Size(590, 31);
             this.textBox1.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(234, 107);
+            this.label3.Location = new System.Drawing.Point(468, 206);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(330, 29);
+            this.label3.Size = new System.Drawing.Size(656, 57);
             this.label3.TabIndex = 21;
             this.label3.Text = "Ingrese el código de la verdura";
             // 
@@ -154,9 +162,10 @@
             this.button1.BackgroundImage = global::WinAppDiseños.Properties.Resources.buscar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(542, 167);
+            this.button1.Location = new System.Drawing.Point(1084, 321);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 29);
+            this.button1.Size = new System.Drawing.Size(62, 56);
             this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -169,9 +178,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox8.Location = new System.Drawing.Point(38, 425);
+            this.pictureBox8.Location = new System.Drawing.Point(76, 817);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox8.Size = new System.Drawing.Size(668, 2);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 64;
             this.pictureBox8.TabStop = false;
@@ -180,27 +190,30 @@
             // 
             this.codigo1.AutoSize = true;
             this.codigo1.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo1.Location = new System.Drawing.Point(158, 386);
+            this.codigo1.Location = new System.Drawing.Point(316, 742);
+            this.codigo1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.codigo1.Name = "codigo1";
-            this.codigo1.Size = new System.Drawing.Size(0, 25);
+            this.codigo1.Size = new System.Drawing.Size(0, 50);
             this.codigo1.TabIndex = 63;
             // 
             // codigo
             // 
             this.codigo.AutoSize = true;
             this.codigo.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo.Location = new System.Drawing.Point(36, 386);
+            this.codigo.Location = new System.Drawing.Point(72, 742);
+            this.codigo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.codigo.Name = "codigo";
-            this.codigo.Size = new System.Drawing.Size(83, 25);
+            this.codigo.Size = new System.Drawing.Size(163, 50);
             this.codigo.TabIndex = 62;
             this.codigo.Text = "Código:";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox5.Location = new System.Drawing.Point(429, 352);
+            this.pictureBox5.Location = new System.Drawing.Point(858, 677);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox5.Size = new System.Drawing.Size(668, 2);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
@@ -208,9 +221,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox4.Location = new System.Drawing.Point(429, 271);
+            this.pictureBox4.Location = new System.Drawing.Point(858, 521);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox4.Size = new System.Drawing.Size(668, 2);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 60;
             this.pictureBox4.TabStop = false;
@@ -218,9 +232,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 352);
+            this.pictureBox2.Location = new System.Drawing.Point(74, 677);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox2.Size = new System.Drawing.Size(668, 2);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
@@ -228,9 +243,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox7.Location = new System.Drawing.Point(37, 271);
+            this.pictureBox7.Location = new System.Drawing.Point(74, 521);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox7.Size = new System.Drawing.Size(668, 2);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 58;
             this.pictureBox7.TabStop = false;
@@ -239,45 +255,50 @@
             // 
             this.stock.AutoSize = true;
             this.stock.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stock.Location = new System.Drawing.Point(549, 308);
+            this.stock.Location = new System.Drawing.Point(1098, 592);
+            this.stock.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.stock.Name = "stock";
-            this.stock.Size = new System.Drawing.Size(0, 25);
+            this.stock.Size = new System.Drawing.Size(0, 50);
             this.stock.TabIndex = 57;
             // 
             // precio
             // 
             this.precio.AutoSize = true;
             this.precio.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(549, 232);
+            this.precio.Location = new System.Drawing.Point(1098, 446);
+            this.precio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.precio.Name = "precio";
-            this.precio.Size = new System.Drawing.Size(0, 25);
+            this.precio.Size = new System.Drawing.Size(0, 50);
             this.precio.TabIndex = 56;
             // 
             // distribuidora
             // 
             this.distribuidora.AutoSize = true;
             this.distribuidora.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.distribuidora.Location = new System.Drawing.Point(186, 308);
+            this.distribuidora.Location = new System.Drawing.Point(372, 592);
+            this.distribuidora.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.distribuidora.Name = "distribuidora";
-            this.distribuidora.Size = new System.Drawing.Size(0, 25);
+            this.distribuidora.Size = new System.Drawing.Size(0, 50);
             this.distribuidora.TabIndex = 55;
             // 
             // nombre
             // 
             this.nombre.AutoSize = true;
             this.nombre.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(186, 232);
+            this.nombre.Location = new System.Drawing.Point(372, 446);
+            this.nombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(0, 25);
+            this.nombre.Size = new System.Drawing.Size(0, 50);
             this.nombre.TabIndex = 54;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(427, 232);
+            this.label7.Location = new System.Drawing.Point(854, 446);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 25);
+            this.label7.Size = new System.Drawing.Size(152, 50);
             this.label7.TabIndex = 53;
             this.label7.Text = "Precio:";
             // 
@@ -285,9 +306,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 308);
+            this.label6.Location = new System.Drawing.Point(64, 592);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 25);
+            this.label6.Size = new System.Drawing.Size(278, 50);
             this.label6.TabIndex = 52;
             this.label6.Text = "Distribuidora:";
             // 
@@ -295,9 +317,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(427, 308);
+            this.label5.Location = new System.Drawing.Point(854, 592);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 25);
+            this.label5.Size = new System.Drawing.Size(136, 50);
             this.label5.TabIndex = 51;
             this.label5.Text = "Stock:";
             // 
@@ -305,18 +328,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 232);
+            this.label4.Location = new System.Drawing.Point(64, 446);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
+            this.label4.Size = new System.Drawing.Size(184, 50);
             this.label4.TabIndex = 50;
             this.label4.Text = "Nombre:";
             // 
             // Buscar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.codigo1);
             this.Controls.Add(this.codigo);
@@ -336,9 +360,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Buscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar";
+            this.Load += new System.EventHandler(this.Buscar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

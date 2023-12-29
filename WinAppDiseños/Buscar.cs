@@ -26,8 +26,7 @@ namespace WinAppDiseños
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ruta = AppDomain.CurrentDomain.BaseDirectory;
-            dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml")); 
+            
 
             System.Data.DataRow[] vect;
             vect = dataSet11.Verdura.Select("codigover =" + textBox1.Text.ToString());
@@ -56,6 +55,12 @@ namespace WinAppDiseños
                 stock.Text = "";
 
             }
+        }
+
+        private void Buscar_Load(object sender, EventArgs e)
+        {
+            string ruta = AppDomain.CurrentDomain.BaseDirectory;
+            dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml"));
         }
     }
 }
