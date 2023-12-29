@@ -30,19 +30,15 @@ namespace WinAppDiseños
 
             System.Data.DataRow[] vect;
             vect = dataSet11.Verdura.Select("codigover =" + textBox1.Text.ToString());
+            
             if(vect.Length > 0)
             {
-                //Mostrar muestra = new Mostrar(vect);
-                //muestra.Show();
-
-                //Prueba para que salga en el mismo form
-
                 codigo1.Text = vect[0]["codigover"].ToString();
                 nombre.Text = vect[0]["nombre"].ToString();
                 distribuidora.Text = vect[0]["distribuidora"].ToString();
                 precio.Text = vect[0]["precio"].ToString();
                 stock.Text = vect[0]["stock"].ToString();
-
+               
             }
             else
             {
