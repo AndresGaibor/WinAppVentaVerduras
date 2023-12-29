@@ -47,6 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.codigo1 = new System.Windows.Forms.Label();
+            this.codigo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -56,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,7 +118,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox5.Location = new System.Drawing.Point(439, 285);
+            this.pictureBox5.Location = new System.Drawing.Point(430, 251);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(334, 1);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +128,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox4.Location = new System.Drawing.Point(439, 204);
+            this.pictureBox4.Location = new System.Drawing.Point(430, 170);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(334, 1);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +138,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 285);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 251);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(334, 1);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +148,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WinAppDiseños.Properties.Resources.negro;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 204);
+            this.pictureBox2.Location = new System.Drawing.Point(38, 170);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(334, 1);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +159,7 @@
             // 
             this.stock.AutoSize = true;
             this.stock.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stock.Location = new System.Drawing.Point(559, 241);
+            this.stock.Location = new System.Drawing.Point(550, 207);
             this.stock.Name = "stock";
             this.stock.Size = new System.Drawing.Size(96, 25);
             this.stock.TabIndex = 41;
@@ -165,7 +169,7 @@
             // 
             this.precio.AutoSize = true;
             this.precio.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(559, 165);
+            this.precio.Location = new System.Drawing.Point(550, 131);
             this.precio.Name = "precio";
             this.precio.Size = new System.Drawing.Size(114, 25);
             this.precio.TabIndex = 40;
@@ -175,7 +179,7 @@
             // 
             this.distribuidora.AutoSize = true;
             this.distribuidora.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.distribuidora.Location = new System.Drawing.Point(182, 241);
+            this.distribuidora.Location = new System.Drawing.Point(187, 207);
             this.distribuidora.Name = "distribuidora";
             this.distribuidora.Size = new System.Drawing.Size(90, 25);
             this.distribuidora.TabIndex = 39;
@@ -185,7 +189,7 @@
             // 
             this.nombre.AutoSize = true;
             this.nombre.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(182, 165);
+            this.nombre.Location = new System.Drawing.Point(187, 131);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(148, 25);
             this.nombre.TabIndex = 38;
@@ -195,7 +199,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(437, 165);
+            this.label7.Location = new System.Drawing.Point(428, 131);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 25);
             this.label7.TabIndex = 37;
@@ -205,7 +209,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 241);
+            this.label6.Location = new System.Drawing.Point(33, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 25);
             this.label6.TabIndex = 36;
@@ -215,7 +219,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(437, 241);
+            this.label5.Location = new System.Drawing.Point(428, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 25);
             this.label5.TabIndex = 35;
@@ -225,7 +229,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 165);
+            this.label4.Location = new System.Drawing.Point(33, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 25);
             this.label4.TabIndex = 34;
@@ -253,12 +257,45 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::WinAppDiseños.Properties.Resources.negro;
+            this.pictureBox8.Location = new System.Drawing.Point(39, 324);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(334, 1);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 49;
+            this.pictureBox8.TabStop = false;
+            // 
+            // codigo1
+            // 
+            this.codigo1.AutoSize = true;
+            this.codigo1.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigo1.Location = new System.Drawing.Point(159, 285);
+            this.codigo1.Name = "codigo1";
+            this.codigo1.Size = new System.Drawing.Size(114, 25);
+            this.codigo1.TabIndex = 48;
+            this.codigo1.Text = "aqui precio";
+            // 
+            // codigo
+            // 
+            this.codigo.AutoSize = true;
+            this.codigo.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigo.Location = new System.Drawing.Point(37, 285);
+            this.codigo.Name = "codigo";
+            this.codigo.Size = new System.Drawing.Size(83, 25);
+            this.codigo.TabIndex = 47;
+            this.codigo.Text = "Código:";
+            // 
             // Mostrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.codigo1);
+            this.Controls.Add(this.codigo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -276,6 +313,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Mostrar";
             this.Text = "Mostrar";
+            this.Load += new System.EventHandler(this.Mostrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -286,6 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +351,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label codigo1;
+        private System.Windows.Forms.Label codigo;
     }
 }

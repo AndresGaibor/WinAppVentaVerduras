@@ -579,7 +579,9 @@ namespace WinAppDiseños {
                                 this.columncodigover}, false));
                 this.columncodigover.AutoIncrement = true;
                 this.columncodigover.AutoIncrementSeed = 1;
+                this.columncodigover.AllowDBNull = false;
                 this.columncodigover.Unique = true;
+                this.columndistribuidora.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -973,6 +975,7 @@ namespace WinAppDiseños {
                 this.columngenero.DefaultValue = ((char)('M'));
                 this.columncodigocli.AutoIncrement = true;
                 this.columncodigocli.AutoIncrementSeed = 1;
+                this.columncodigocli.AllowDBNull = false;
                 this.columncodigocli.Unique = true;
                 this.columnedad.DefaultValue = ((int)(18));
             }
@@ -1283,8 +1286,10 @@ namespace WinAppDiseños {
                                 this.columncodigover}, false));
                 this.columncodigoFact.AutoIncrement = true;
                 this.columncodigoFact.AutoIncrementSeed = 1;
+                this.columncodigoFact.AllowDBNull = false;
                 this.columncodigover.AutoIncrement = true;
                 this.columncodigover.AutoIncrementSeed = 1;
+                this.columncodigover.AllowDBNull = false;
                 this.columncantidad.DefaultValue = ((int)(1));
                 this.columnprecio.DefaultValue = ((double)(0D));
                 this.columnsubtotal.DefaultValue = ((double)(0D));
@@ -1583,6 +1588,7 @@ namespace WinAppDiseños {
                 this.columncodigocli.AutoIncrementSeed = 1;
                 this.columncodigoFact.AutoIncrement = true;
                 this.columncodigoFact.AutoIncrementSeed = 1;
+                this.columncodigoFact.AllowDBNull = false;
                 this.columncodigoFact.Unique = true;
             }
             
@@ -1728,12 +1734,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int codigover {
                 get {
-                    try {
-                        return ((int)(this[this.tableVerdura.codigoverColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigover\' de la tabla \'Verdura\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableVerdura.codigoverColumn]));
                 }
                 set {
                     this[this.tableVerdura.codigoverColumn] = value;
@@ -1760,12 +1761,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string distribuidora {
                 get {
-                    try {
-                        return ((string)(this[this.tableVerdura.distribuidoraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'distribuidora\' de la tabla \'Verdura\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tableVerdura.distribuidoraColumn]));
                 }
                 set {
                     this[this.tableVerdura.distribuidoraColumn] = value;
@@ -1806,18 +1802,6 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscodigoverNull() {
-                return this.IsNull(this.tableVerdura.codigoverColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcodigoverNull() {
-                this[this.tableVerdura.codigoverColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsnombreNull() {
                 return this.IsNull(this.tableVerdura.nombreColumn);
             }
@@ -1826,18 +1810,6 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnombreNull() {
                 this[this.tableVerdura.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdistribuidoraNull() {
-                return this.IsNull(this.tableVerdura.distribuidoraColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdistribuidoraNull() {
-                this[this.tableVerdura.distribuidoraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2038,12 +2010,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int codigocli {
                 get {
-                    try {
-                        return ((int)(this[this.tableCliente.codigocliColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigocli\' de la tabla \'Cliente\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableCliente.codigocliColumn]));
                 }
                 set {
                     this[this.tableCliente.codigocliColumn] = value;
@@ -2176,18 +2143,6 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscodigocliNull() {
-                return this.IsNull(this.tableCliente.codigocliColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcodigocliNull() {
-                this[this.tableCliente.codigocliColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsedadNull() {
                 return this.IsNull(this.tableCliente.edadColumn);
             }
@@ -2228,12 +2183,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int codigoFact {
                 get {
-                    try {
-                        return ((int)(this[this.tableDetalleFact.codigoFactColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigoFact\' de la tabla \'DetalleFact\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableDetalleFact.codigoFactColumn]));
                 }
                 set {
                     this[this.tableDetalleFact.codigoFactColumn] = value;
@@ -2244,12 +2194,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int codigover {
                 get {
-                    try {
-                        return ((int)(this[this.tableDetalleFact.codigoverColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigover\' de la tabla \'DetalleFact\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableDetalleFact.codigoverColumn]));
                 }
                 set {
                     this[this.tableDetalleFact.codigoverColumn] = value;
@@ -2324,30 +2269,6 @@ namespace WinAppDiseños {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Verdura_DetalleFact"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscodigoFactNull() {
-                return this.IsNull(this.tableDetalleFact.codigoFactColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcodigoFactNull() {
-                this[this.tableDetalleFact.codigoFactColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscodigoverNull() {
-                return this.IsNull(this.tableDetalleFact.codigoverColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcodigoverNull() {
-                this[this.tableDetalleFact.codigoverColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2437,12 +2358,7 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int codigoFact {
                 get {
-                    try {
-                        return ((int)(this[this.tableFactura.codigoFactColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigoFact\' de la tabla \'Factura\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableFactura.codigoFactColumn]));
                 }
                 set {
                     this[this.tableFactura.codigoFactColumn] = value;
@@ -2498,18 +2414,6 @@ namespace WinAppDiseños {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SettotalNull() {
                 this[this.tableFactura.totalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscodigoFactNull() {
-                return this.IsNull(this.tableFactura.codigoFactColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcodigoFactNull() {
-                this[this.tableFactura.codigoFactColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
