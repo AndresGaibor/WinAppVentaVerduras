@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Verdura" ZOrder="4" X="118" Y="112" Height="124" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="120" />
-    <Shape ID="DesignTable:Cliente" ZOrder="3" X="696" Y="172" Height="238" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="234" />
+    <Shape ID="DesignTable:Cliente" ZOrder="3" X="696" Y="172" Height="362" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="358" />
     <Shape ID="DesignTable:DetalleFact" ZOrder="2" X="151" Y="319" Height="124" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="120" />
     <Shape ID="DesignTable:Factura" ZOrder="1" X="430" Y="108" Height="105" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="101" />
   </Shapes>
@@ -15,15 +15,15 @@
     <Connector ID="DesignRelation:Cliente_Factura" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>846</X>
+          <X>888</X>
           <Y>378</Y>
         </Point>
         <Point>
-          <X>854</X>
+          <X>896</X>
           <Y>378</Y>
         </Point>
         <Point>
-          <X>854</X>
+          <X>896</X>
           <Y>154</Y>
         </Point>
         <Point>
