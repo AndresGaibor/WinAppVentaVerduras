@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos.cs" />
     <Compile Include="Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +86,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuClientes.Designer.cs">
+      <DependentUpon>MenuClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuProductos.Designer.cs">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVentas.Designer.cs">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Mostrar.cs">
       <SubType>Form</SubType>
@@ -123,6 +136,12 @@
     <Compile Include="Rpt_Verduras.Designer.cs">
       <DependentUpon>Rpt_Verduras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vender.Designer.cs">
+      <DependentUpon>Vender.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,8 +157,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuClientes.resx">
+      <DependentUpon>MenuClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuProductos.resx">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVentas.resx">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mostrar.resx">
       <DependentUpon>Mostrar.cs</DependentUpon>
@@ -165,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Verduras.resx">
       <DependentUpon>Rpt_Verduras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vender.resx">
+      <DependentUpon>Vender.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

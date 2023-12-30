@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Formulalrio_validation
+namespace WinAppDiseños
 {
     internal class Cedula
     {
