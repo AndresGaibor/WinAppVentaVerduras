@@ -129,7 +129,7 @@ namespace WinAppDiseños
 
         private void calcularSubtotal(int fila)
         {
-            if(fila < dGVDetalleFactura.Rows.Count - 2)
+            if(fila < dGVDetalleFactura.Rows.Count - 1)
             {
                 
                 return;
@@ -171,7 +171,7 @@ namespace WinAppDiseños
             {
                 this.dGVDetalleFactura.Rows.Add(producto["CodigoProducto"].Value, producto["NombreProducto"].Value, 1, producto["PrecioProducto"].Value);
 
-                this.calcularSubtotal(dGVDetalleFactura.Rows.Count - 2);
+                this.calcularSubtotal(dGVDetalleFactura.Rows.Count - 1);
                 this.filaDetalle++;
             } else
             {
@@ -202,24 +202,40 @@ namespace WinAppDiseños
 
             if (e.ColumnIndex == 2 || e.ColumnIndex == 3)
             {
-                try
-                {
-                    int cantidad = Convert.ToInt16(item["cantidad"].Value.ToString().Replace('.', ','));
-                } catch
-                {
-                    dGVDetalleFactura.Rows[fila].Cells["cantidad"].Value = 1;
-                }
-
-                try
-                {
-                    double precio = Convert.ToDouble(item["precio"].Value.ToString().Replace('.', ','));
-                }
-                catch
-                {
-                    dGVDetalleFactura.Rows[fila].Cells["precio"].Value = 1;
-                }
+                
 
                 calcularSubtotal(fila);
+            }
+        }
+
+        private void dGVDetalleFactura_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == 2) // 1 should be your column index
+            {
+                int i;
+
+                if (!int.TryParse(Convert.ToString(e.FormattedValue), out i))
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ingrese solo numeros enteros");
+                }
+                else
+                {
+                    // the input is numeric 
+                }
+            }
+
+            if (e.ColumnIndex == 3)
+            {
+                decimal i;
+                string v = e.FormattedValue.ToString().Replace('.', ',');
+                dGVDetalleFactura.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = v;
+
+                if (!decimal.TryParse(v, out i))
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ingrese un numero");
+                }
             }
         }
     }

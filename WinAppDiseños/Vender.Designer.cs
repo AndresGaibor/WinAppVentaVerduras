@@ -229,6 +229,7 @@
             // 
             // dGVDetalleFactura
             // 
+            this.dGVDetalleFactura.AllowUserToAddRows = false;
             this.dGVDetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDetalleFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -240,6 +241,7 @@
             this.dGVDetalleFactura.Name = "dGVDetalleFactura";
             this.dGVDetalleFactura.Size = new System.Drawing.Size(558, 212);
             this.dGVDetalleFactura.TabIndex = 24;
+            this.dGVDetalleFactura.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dGVDetalleFactura_CellValidating);
             this.dGVDetalleFactura.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDetalleFactura_CellValueChanged);
             // 
             // Codigo
