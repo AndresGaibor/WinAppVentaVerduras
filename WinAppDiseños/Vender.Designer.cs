@@ -36,11 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSecuencia = new System.Windows.Forms.TextBox();
             this.dGVProductos = new System.Windows.Forms.DataGridView();
-            this.codigoverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.verduraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WinAppDiseños.DataSet1();
             this.dGVDetalleFactura = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,24 +45,31 @@
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFacturar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dTPFecha = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.dataSet11 = new WinAppDiseños.DataSet1();
+            this.verduraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StockProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -140,52 +142,17 @@
             this.dGVProductos.AutoGenerateColumns = false;
             this.dGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoverDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.stockDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn});
-            this.dGVProductos.DataSource = this.verduraBindingSource;
+            this.CodigoProducto,
+            this.NombreProducto,
+            this.StockProducto,
+            this.PrecioProducto});
+            this.dGVProductos.DataSource = this.verduraBindingSource1;
             this.dGVProductos.Location = new System.Drawing.Point(613, 189);
             this.dGVProductos.Name = "dGVProductos";
             this.dGVProductos.ReadOnly = true;
             this.dGVProductos.Size = new System.Drawing.Size(307, 352);
             this.dGVProductos.TabIndex = 23;
-            // 
-            // codigoverDataGridViewTextBoxColumn
-            // 
-            this.codigoverDataGridViewTextBoxColumn.DataPropertyName = "codigover";
-            this.codigoverDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoverDataGridViewTextBoxColumn.Name = "codigoverDataGridViewTextBoxColumn";
-            this.codigoverDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoverDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stockDataGridViewTextBoxColumn
-            // 
-            this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
-            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
-            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            this.stockDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stockDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // verduraBindingSource
-            // 
-            this.verduraBindingSource.DataMember = "Verdura";
-            this.verduraBindingSource.DataSource = this.dataSet1;
+            this.dGVProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProductos_CellDoubleClick);
             // 
             // dataSet1
             // 
@@ -249,6 +216,7 @@
             this.btnFacturar.TabIndex = 27;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = false;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // label6
             // 
@@ -261,16 +229,16 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Fecha";
             // 
-            // label7
+            // lblCliente
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(286, 160);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 23);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "CONSUMIDOR FINAL";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.ForeColor = System.Drawing.Color.Black;
+            this.lblCliente.Location = new System.Drawing.Point(286, 160);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(198, 23);
+            this.lblCliente.TabIndex = 33;
+            this.lblCliente.Text = "CONSUMIDOR FINAL";
             // 
             // label8
             // 
@@ -294,13 +262,36 @@
             this.txtCliente.Size = new System.Drawing.Size(182, 20);
             this.txtCliente.TabIndex = 31;
             this.txtCliente.Text = "9999999999";
+            this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
             // 
-            // dateTimePicker1
+            // dTPFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(21, 212);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dTPFecha.Location = new System.Drawing.Point(21, 212);
+            this.dTPFecha.Name = "dTPFecha";
+            this.dTPFecha.Size = new System.Drawing.Size(200, 20);
+            this.dTPFecha.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lato Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(391, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 23);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "TOTAL";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(488, 210);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(21, 23);
+            this.lblTotal.TabIndex = 36;
+            this.lblTotal.Text = "0";
             // 
             // btnBuscar
             // 
@@ -346,27 +337,46 @@
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
             // 
-            // label4
+            // dataSet11
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lato Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(391, 212);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 23);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "TOTAL";
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lblTotal
+            // verduraBindingSource1
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(488, 210);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(21, 23);
-            this.lblTotal.TabIndex = 36;
-            this.lblTotal.Text = "0";
+            this.verduraBindingSource1.DataMember = "Verdura";
+            this.verduraBindingSource1.DataSource = this.dataSet1;
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.DataPropertyName = "codigover";
+            this.CodigoProducto.HeaderText = "Codigo";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 50;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.DataPropertyName = "nombre";
+            this.NombreProducto.HeaderText = "Nombre";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            // 
+            // StockProducto
+            // 
+            this.StockProducto.DataPropertyName = "stock";
+            this.StockProducto.HeaderText = "Stock";
+            this.StockProducto.Name = "StockProducto";
+            this.StockProducto.ReadOnly = true;
+            this.StockProducto.Width = 50;
+            // 
+            // PrecioProducto
+            // 
+            this.PrecioProducto.DataPropertyName = "precio";
+            this.PrecioProducto.HeaderText = "Precio";
+            this.PrecioProducto.Name = "PrecioProducto";
+            this.PrecioProducto.ReadOnly = true;
+            this.PrecioProducto.Width = 60;
             // 
             // Vender
             // 
@@ -375,8 +385,8 @@
             this.ClientSize = new System.Drawing.Size(932, 560);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dTPFecha);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label6);
@@ -390,15 +400,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "Vender";
             this.Text = "Vender";
+            this.Load += new System.EventHandler(this.Vender_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,11 +429,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSecuencia;
         private System.Windows.Forms.DataGridView dGVProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoverDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource verduraBindingSource;
         private DataSet1 dataSet1;
         private System.Windows.Forms.DataGridView dGVDetalleFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -431,11 +438,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dTPFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTotal;
+        private DataSet1 dataSet11;
+        private System.Windows.Forms.BindingSource verduraBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StockProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioProducto;
     }
 }
