@@ -113,7 +113,7 @@ namespace WinAppDiseños
 
         private void calcularTotal()
         {
-            int total = 0;
+            double total = 0;
             foreach(DataGridViewRow fila in dGVDetalleFactura.Rows)
             {
                 if (fila.Cells["Subtotal"].Value == null)
@@ -121,7 +121,7 @@ namespace WinAppDiseños
                     continue;
                 }
 
-                total += Convert.ToInt32(fila.Cells["Subtotal"].Value);
+                total += Convert.ToDouble(fila.Cells["Subtotal"].Value);
             }
 
             this.lblTotal.Text = total.ToString();
