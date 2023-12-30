@@ -109,5 +109,11 @@ namespace WinAppDiseños
             MenuClientes mc = new MenuClientes();
             mc.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Reportes rp = new Reportes();
+            rp.Show();
+        }
     }
 }
