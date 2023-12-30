@@ -23,8 +23,7 @@ namespace WinAppDiseños
         private void Pagina_principal_Load(object sender, EventArgs e)
         {
             Archivos archivos = new Archivos();
-            string[] listaNombres = { "Inventario.xml", "Clientes.xml", "Ventas.xml", "DetalleVentas.xml" };
-            archivos.crearArchivos(listaNombres);
+            archivos.crearArchivoXml();
         }
         public void RecibirInformacion(string informacion)
         {
