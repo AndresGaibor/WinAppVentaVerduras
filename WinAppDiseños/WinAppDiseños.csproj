@@ -206,6 +206,9 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Inf_ClientesGeneral.rdlc" />
+    <EmbeddedResource Include="Reportes\Inf_FacturaGeneral.rdlc" />
+    <EmbeddedResource Include="Reportes\Inf_VerdurasGenerales.rdlc" />
     <EmbeddedResource Include="Rpt_Verduras.resx">
       <DependentUpon>Rpt_Verduras.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,8 +311,6 @@
   <ItemGroup>
     <None Include="Resources\retroceder.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
