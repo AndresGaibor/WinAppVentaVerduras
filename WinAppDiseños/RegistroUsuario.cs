@@ -165,10 +165,11 @@ namespace WinAppDiseños
 
                     dataSet11.Cliente.Rows.Add(vect);
 
-                    MessageBox.Show("Usuario Ingresado con éxito.");
-                    Console.WriteLine("---RegistroUsuario--- Usuario Ingresado con éxito.");
+                    MessageBox.Show("Cliente Ingresado con éxito.");
+                    Console.WriteLine("---RegistroUsuario--- Cliente Ingresado con éxito.");
                     dataSet11.WriteXml(Path.Combine(ruta, "Inventario.xml"));
-                    this.DialogResult = DialogResult.OK;
+
+                    this.Close();
                 }
 
             }

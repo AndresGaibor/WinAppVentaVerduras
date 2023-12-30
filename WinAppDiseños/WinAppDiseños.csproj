@@ -53,6 +53,12 @@
     <Compile Include="Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buscar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar_Cliente.Designer.cs">
+      <DependentUpon>Buscar_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar_editar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
@@ -145,11 +157,17 @@
     <EmbeddedResource Include="Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buscar_Cliente.resx">
+      <DependentUpon>Buscar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buscar_editar.resx">
       <DependentUpon>Buscar_editar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscar_eliminar.resx">
       <DependentUpon>Buscar_eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>
