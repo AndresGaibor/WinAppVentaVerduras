@@ -9,7 +9,7 @@ namespace WinAppDiseños
 {
     internal class Archivos
     {
-        public string rutaDebug =  AppDomain.CurrentDomain.BaseDirectory;
+        public static string rutaDebug =  AppDomain.CurrentDomain.BaseDirectory;
         public void crearArchivos(string[] nombres)
         {
                for (int i = 0; i < nombres.Length; i++)
