@@ -162,5 +162,12 @@ namespace WinAppDiseños
             RegistroUsuario llmarform = new RegistroUsuario();
             llmarform.ShowDialog();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            // bypass para no estar ingresando usuario y contrasenia durante las pruebas
+            Pagina_principal objetopin = new Pagina_principal();
+            objetopin.ShowDialog();
+        }
     }
 }
