@@ -21,5 +21,11 @@ namespace WinAppDiseños
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            RegistroUsuario registroUsuario = new RegistroUsuario();
+            registroUsuario.ShowDialog();
+        }
     }
 }
