@@ -22,7 +22,9 @@ namespace WinAppDiseños
 
         private void Pagina_principal_Load(object sender, EventArgs e)
         {
-
+            Archivos archivos = new Archivos();
+            string[] listaNombres = { "Inventario.xml", "Clientes.xml", "Ventas.xml", "DetalleVentas.xml" };
+            archivos.crearArchivos(listaNombres);
         }
         public void RecibirInformacion(string informacion)
         {
@@ -99,7 +101,8 @@ namespace WinAppDiseños
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            MenuVentas mv = new MenuVentas();
+            mv.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
