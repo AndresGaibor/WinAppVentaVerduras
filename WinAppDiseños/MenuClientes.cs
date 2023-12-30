@@ -39,5 +39,11 @@ namespace WinAppDiseños
             EditarCliente editarCliente = new EditarCliente();
             editarCliente.ShowDialog();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            EliminarCliente eliminarCliente = new EliminarCliente();
+            eliminarCliente.ShowDialog();
+        }
     }
 }
