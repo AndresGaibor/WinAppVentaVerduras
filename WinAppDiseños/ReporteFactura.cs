@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace WinAppDiseños
 {
-    public partial class MenuVentas : Form
+    public partial class ReporteFactura : Form
     {
-        public MenuVentas()
+        public ReporteFactura()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void ReporteFactura_Load(object sender, EventArgs e)
         {
-            Vender vd = new Vender();
-            vd.Show();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.dataSet1.leerXml();
+            this.reportViewer1.RefreshReport();
         }
     }
 }

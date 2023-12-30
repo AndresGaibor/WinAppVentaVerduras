@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataSet11 = new WinAppDiseños.DataSet1();
-            this.label10 = new System.Windows.Forms.Label();
-            this.BTN_Eliminar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -135,6 +135,33 @@
             this.panel2.Size = new System.Drawing.Size(1124, 533);
             this.panel2.TabIndex = 115;
             this.panel2.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lato", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Firebrick;
+            this.label10.Location = new System.Drawing.Point(592, 409);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(470, 34);
+            this.label10.TabIndex = 114;
+            this.label10.Text = "¿Está seguro de eliminar este Cliente?";
+            // 
+            // BTN_Eliminar
+            // 
+            this.BTN_Eliminar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.BTN_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BTN_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Eliminar.Location = new System.Drawing.Point(763, 448);
+            this.BTN_Eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BTN_Eliminar.Name = "BTN_Eliminar";
+            this.BTN_Eliminar.Size = new System.Drawing.Size(159, 62);
+            this.BTN_Eliminar.TabIndex = 113;
+            this.BTN_Eliminar.Text = "Eliminar";
+            this.BTN_Eliminar.UseVisualStyleBackColor = false;
+            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 
             // txtCodigo
             // 
@@ -559,6 +586,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -608,33 +636,6 @@
             // 
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lato", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Firebrick;
-            this.label10.Location = new System.Drawing.Point(592, 409);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(470, 34);
-            this.label10.TabIndex = 114;
-            this.label10.Text = "¿Está seguro de eliminar este Cliente?";
-            // 
-            // BTN_Eliminar
-            // 
-            this.BTN_Eliminar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.BTN_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.BTN_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Eliminar.Location = new System.Drawing.Point(763, 448);
-            this.BTN_Eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BTN_Eliminar.Name = "BTN_Eliminar";
-            this.BTN_Eliminar.Size = new System.Drawing.Size(159, 62);
-            this.BTN_Eliminar.TabIndex = 113;
-            this.BTN_Eliminar.Text = "Eliminar";
-            this.BTN_Eliminar.UseVisualStyleBackColor = false;
-            this.BTN_Eliminar.Click += new System.EventHandler(this.BTN_Eliminar_Click);
             // 
             // EliminarCliente
             // 

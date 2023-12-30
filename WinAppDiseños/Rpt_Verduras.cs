@@ -16,5 +16,11 @@ namespace WinAppDiseños
         {
             InitializeComponent();
         }
+
+        private void Rpt_Verduras_Load(object sender, EventArgs e)
+        {
+            this.dataSet11.leerXml();
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

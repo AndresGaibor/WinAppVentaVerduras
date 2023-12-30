@@ -336,5 +336,10 @@ namespace WinAppDiseños
 
             dGVDetalleFactura.Rows.RemoveAt(filaSeleccionada);
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
