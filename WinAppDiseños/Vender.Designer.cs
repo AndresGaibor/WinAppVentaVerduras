@@ -31,11 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSecuencia = new System.Windows.Forms.TextBox();
             this.dGVProductos = new System.Windows.Forms.DataGridView();
+            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StockProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.verduraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WinAppDiseños.DataSet1();
             this.dGVDetalleFactura = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,24 +60,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.dataSet11 = new WinAppDiseños.DataSet1();
-            this.verduraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StockProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -95,6 +95,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(932, 72);
             this.panel1.TabIndex = 12;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::WinAppDiseños.Properties.Resources.retroceder;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::WinAppDiseños.Properties.Resources.IngresarP;
+            this.pictureBox3.Location = new System.Drawing.Point(710, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 66);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
+            this.pictureBox6.Location = new System.Drawing.Point(841, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(65, 62);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
             // 
             // label1
             // 
@@ -154,6 +186,42 @@
             this.dGVProductos.TabIndex = 23;
             this.dGVProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProductos_CellDoubleClick);
             // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.DataPropertyName = "codigover";
+            this.CodigoProducto.HeaderText = "Codigo";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 50;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.DataPropertyName = "nombre";
+            this.NombreProducto.HeaderText = "Nombre";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            // 
+            // StockProducto
+            // 
+            this.StockProducto.DataPropertyName = "stock";
+            this.StockProducto.HeaderText = "Stock";
+            this.StockProducto.Name = "StockProducto";
+            this.StockProducto.ReadOnly = true;
+            this.StockProducto.Width = 50;
+            // 
+            // PrecioProducto
+            // 
+            this.PrecioProducto.DataPropertyName = "precio";
+            this.PrecioProducto.HeaderText = "Precio";
+            this.PrecioProducto.Name = "PrecioProducto";
+            this.PrecioProducto.ReadOnly = true;
+            this.PrecioProducto.Width = 60;
+            // 
+            // verduraBindingSource1
+            // 
+            this.verduraBindingSource1.DataMember = "Verdura";
+            this.verduraBindingSource1.DataSource = this.dataSet1;
+            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
@@ -172,6 +240,7 @@
             this.dGVDetalleFactura.Name = "dGVDetalleFactura";
             this.dGVDetalleFactura.Size = new System.Drawing.Size(558, 212);
             this.dGVDetalleFactura.TabIndex = 24;
+            this.dGVDetalleFactura.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDetalleFactura_CellValueChanged);
             // 
             // Codigo
             // 
@@ -305,78 +374,10 @@
             this.btnBuscar.TabIndex = 18;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::WinAppDiseños.Properties.Resources.retroceder;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 47);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::WinAppDiseños.Properties.Resources.IngresarP;
-            this.pictureBox3.Location = new System.Drawing.Point(710, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 66);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
-            this.pictureBox6.Location = new System.Drawing.Point(841, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 62);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            // 
             // dataSet11
             // 
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // verduraBindingSource1
-            // 
-            this.verduraBindingSource1.DataMember = "Verdura";
-            this.verduraBindingSource1.DataSource = this.dataSet1;
-            // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.DataPropertyName = "codigover";
-            this.CodigoProducto.HeaderText = "Codigo";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            this.CodigoProducto.Width = 50;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.DataPropertyName = "nombre";
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            // 
-            // StockProducto
-            // 
-            this.StockProducto.DataPropertyName = "stock";
-            this.StockProducto.HeaderText = "Stock";
-            this.StockProducto.Name = "StockProducto";
-            this.StockProducto.ReadOnly = true;
-            this.StockProducto.Width = 50;
-            // 
-            // PrecioProducto
-            // 
-            this.PrecioProducto.DataPropertyName = "precio";
-            this.PrecioProducto.HeaderText = "Precio";
-            this.PrecioProducto.Name = "PrecioProducto";
-            this.PrecioProducto.ReadOnly = true;
-            this.PrecioProducto.Width = 60;
             // 
             // Vender
             // 
@@ -403,14 +404,14 @@
             this.Load += new System.EventHandler(this.Vender_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verduraBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDetalleFactura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

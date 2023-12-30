@@ -111,23 +111,73 @@ namespace WinAppDiseños
         }
         int filaDetalle = 0;
 
+        private void calcularTotal()
+        {
+            int total = 0;
+            foreach(DataGridViewRow fila in dGVDetalleFactura.Rows)
+            {
+                if (fila.Cells["Subtotal"].Value == null)
+                {
+                    continue;
+                }
+
+                total += Convert.ToInt32(fila.Cells["Subtotal"].Value);
+            }
+
+            this.lblTotal.Text = total.ToString();
+        }
+
+        private void calcularSubtotal(int fila)
+        {
+            if(fila < dGVDetalleFactura.Rows.Count - 2)
+            {
+                
+                return;
+            }
+
+            DataGridViewCellCollection item = dGVDetalleFactura.Rows[fila].Cells;
+            double cantidad = Convert.ToDouble(item["cantidad"].Value);
+            double precio = Convert.ToDouble(item["precio"].Value);
+
+
+            dGVDetalleFactura.Rows[fila].Cells["Subtotal"].Value = (double)cantidad * precio;
+            calcularTotal();
+        }
+
         private void dGVProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // valor de la primera columna de la fila seleccionada
             int filaSeleccionada = e.RowIndex;
             DataGridViewCellCollection producto = dGVProductos.Rows[filaSeleccionada].Cells;
 
-            this.dGVDetalleFactura.Rows.Add(producto["CodigoProducto"].Value, producto["NombreProducto"].Value, 1, producto["PrecioProducto"].Value);
-
+            
             // revisa si la primera columna ya tiene un dato con ese codigo
             int enc = -1;
             foreach (DataGridViewRow fila in dGVDetalleFactura.Rows)
             {
-                if (fila.Cells[0].Value.ToString() == producto["CodigoProducto"].Value.ToString())
+                if (fila.Cells["Codigo"].Value == null)
+                {
+                    continue;
+                }
+
+                if (fila.Cells["Codigo"].Value.ToString() == producto["CodigoProducto"].Value.ToString())
                 {
                     enc = fila.Index;
                     break;
                 }
+            }
+
+            if(enc == -1)
+            {
+                this.dGVDetalleFactura.Rows.Add(producto["CodigoProducto"].Value, producto["NombreProducto"].Value, 1, producto["PrecioProducto"].Value);
+
+                this.calcularSubtotal(dGVDetalleFactura.Rows.Count - 2);
+                this.filaDetalle++;
+            } else
+            {
+                int cantidadDetalle = Convert.ToInt32(dGVDetalleFactura.Rows[enc].Cells["cantidad"].Value);
+                dGVDetalleFactura.Rows[enc].Cells["cantidad"].Value = cantidadDetalle + 1;
+                this.calcularSubtotal(enc);
             }
         }
 
@@ -138,7 +188,39 @@ namespace WinAppDiseños
             dGVProductos.DataSource = dataSet11.Tables["Verdura"];
 
             dGVProductos.Refresh();
+        }
 
+        private void dGVDetalleFactura_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int fila = e.RowIndex;
+            if(fila == -1)
+            {
+                return;
+            }
+            // si es columna cantidad o precio
+            DataGridViewCellCollection item = dGVDetalleFactura.Rows[fila].Cells;
+
+            if (e.ColumnIndex == 2 || e.ColumnIndex == 3)
+            {
+                try
+                {
+                    int cantidad = Convert.ToInt16(item["cantidad"].Value.ToString().Replace('.', ','));
+                } catch
+                {
+                    dGVDetalleFactura.Rows[fila].Cells["cantidad"].Value = 1;
+                }
+
+                try
+                {
+                    double precio = Convert.ToDouble(item["precio"].Value.ToString().Replace('.', ','));
+                }
+                catch
+                {
+                    dGVDetalleFactura.Rows[fila].Cells["precio"].Value = 1;
+                }
+
+                calcularSubtotal(fila);
+            }
         }
     }
 }
