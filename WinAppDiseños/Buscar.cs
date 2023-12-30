@@ -26,30 +26,39 @@ namespace WinAppDiseños
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
-            System.Data.DataRow[] vect;
-            vect = dataSet11.Verdura.Select("codigover =" + textBox1.Text.ToString());
-            
-            if(vect.Length > 0)
+            try
             {
-                codigo1.Text = vect[0]["codigover"].ToString();
-                nombre.Text = vect[0]["nombre"].ToString();
-                distribuidora.Text = vect[0]["distribuidora"].ToString();
-                precio.Text = vect[0]["precio"].ToString();
-                stock.Text = vect[0]["stock"].ToString();
-               
+
+                System.Data.DataRow[] vect;
+                vect = dataSet11.Verdura.Select("codigover =" + textBox1.Text.ToString());
+
+                if (vect.Length > 0)
+                {
+                    codigo1.Text = vect[0]["codigover"].ToString();
+                    nombre.Text = vect[0]["nombre"].ToString();
+                    distribuidora.Text = vect[0]["distribuidora"].ToString();
+                    precio.Text = vect[0]["precio"].ToString();
+                    stock.Text = vect[0]["stock"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el código de la verdura");
+                    textBox1.Clear();
+                    codigo1.Text = "";
+                    nombre.Text = "";
+                    distribuidora.Text = "";
+                    precio.Text = "";
+                    stock.Text = "";
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No se encontró el código de la verdura");
-                textBox1.Clear();
-                codigo1.Text = "";
-                nombre.Text = "";
-                distribuidora.Text = "";
-                precio.Text = "";
-                stock.Text = "";
 
+                MessageBox.Show("Ingrese un código válido.");
+                Console.WriteLine("---InputBuscar----" + ex.Message);
             }
         }
 
@@ -57,6 +66,14 @@ namespace WinAppDiseños
         {
             string ruta = AppDomain.CurrentDomain.BaseDirectory;
             dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml"));
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }
