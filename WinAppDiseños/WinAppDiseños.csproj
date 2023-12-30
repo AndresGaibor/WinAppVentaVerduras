@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos.cs" />
     <Compile Include="Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +97,12 @@
     </Compile>
     <Compile Include="MenuProductos.Designer.cs">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVentas.Designer.cs">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Mostrar.cs">
       <SubType>Form</SubType>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProductos.resx">
       <DependentUpon>MenuProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVentas.resx">
+      <DependentUpon>MenuVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mostrar.resx">
       <DependentUpon>Mostrar.cs</DependentUpon>
