@@ -95,6 +95,11 @@ namespace WinAppDiseños
             LeerFechaNac();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         DateTime fechaNac;
 
         public EditarCliente()
