@@ -28,5 +28,16 @@ namespace WinAppDiseños
             ReporteCliente rc = new ReporteCliente();
             rc.Show();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ReporteFacturas rf = new ReporteFacturas();
+            rf.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WinAppDiseños
 {
-    partial class ReporteCliente
+    partial class ReporteFacturas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,58 +30,67 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WinAppDiseños.DataSet1();
+            this.detalleFactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleFactBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // clienteBindingSource
+            // facturaBindingSource
             // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.dataSet1;
+            this.facturaBindingSource.DataMember = "Factura";
+            this.facturaBindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // detalleFactBindingSource
+            // 
+            this.detalleFactBindingSource.DataMember = "DetalleFact";
+            this.detalleFactBindingSource.DataSource = this.dataSet1;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.clienteBindingSource;
+            reportDataSource1.Value = this.facturaBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.detalleFactBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinAppDiseños.Reportes.Inf_ClientesGeneral.rdlc";
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinAppDiseños.Reportes.Inf_FacturaGeneral.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(949, 504);
-            this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.reportViewer1.Size = new System.Drawing.Size(940, 496);
+            this.reportViewer1.TabIndex = 11;
             // 
-            // ReporteCliente
+            // ReporteFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 504);
+            this.ClientSize = new System.Drawing.Size(940, 496);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ReporteCliente";
-            this.Text = "ReporteCliente";
-            this.Load += new System.EventHandler(this.ReporteCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            this.Name = "ReporteFacturas";
+            this.Text = "ReporteFacturas";
+            this.Load += new System.EventHandler(this.ReporteFacturas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleFactBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
         private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource facturaBindingSource;
+        private System.Windows.Forms.BindingSource detalleFactBindingSource;
     }
 }

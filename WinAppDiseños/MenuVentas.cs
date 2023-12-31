@@ -22,5 +22,27 @@ namespace WinAppDiseños
             Vender vd = new Vender();
             vd.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            BuscarVentas bv = new BuscarVentas();
+            bv.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            EliminarVentas ev = new EliminarVentas();
+            ev.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

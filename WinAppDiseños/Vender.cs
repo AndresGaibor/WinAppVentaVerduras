@@ -336,5 +336,10 @@ namespace WinAppDiseños
 
             dGVDetalleFactura.Rows.RemoveAt(filaSeleccionada);
         }
+
+        private void dGVDetalleFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

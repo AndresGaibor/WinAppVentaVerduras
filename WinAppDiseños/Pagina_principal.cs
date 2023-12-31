@@ -74,6 +74,19 @@ namespace WinAppDiseños
             panel4.Visible= false;  
         }
         //Opcion4
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(width: 144, height: 131);
+            panel7.Visible = true;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(width: 124, height: 111);
+            panel7.Visible = false;
+        }
+
+        //Opcion5
         private void pictureBox5_MouseHover(object sender, EventArgs e)
         {
             pictureBox5.Size = new Size(width: 144, height: 131);
@@ -115,5 +128,7 @@ namespace WinAppDiseños
             Reportes rp = new Reportes();
             rp.Show();
         }
+
+       
     }
 }
