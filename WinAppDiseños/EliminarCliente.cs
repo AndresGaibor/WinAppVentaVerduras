@@ -30,9 +30,12 @@ namespace WinAppDiseños
 
                 string cedula = textBox1.Text.Trim();
 
-                DataRow[] datos;
+                DataRow[] datos, vect1;
+
                 datos = dataSet11.Cliente.Select("cedula =" + cedula);
-                if (datos.Length > 0)
+                vect1 = dataSet11.Factura.Select("codigocli =" + datos[0]["codigocli"]);
+
+                if (datos.Length > 0 && vect1==null)
                 {
                     txtNombre.Text = datos[0]["nombre"].ToString();
                     txtCedula.Text = datos[0]["cedula"].ToString();
@@ -52,6 +55,7 @@ namespace WinAppDiseños
                     Console.WriteLine("---Ingreso--- Cédula Encontrada" + cedula);
                     panel2.Visible = true;
                 }
+                else if(vect1!=null) MessageBox.Show("No se puede eliminar el cliente porque está en una factura.");
                 else
                 {
                     MessageBox.Show("No se ha encontrado un cliente con esa cédula");

@@ -68,14 +68,14 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(940, 496);
+            this.reportViewer1.Size = new System.Drawing.Size(862, 496);
             this.reportViewer1.TabIndex = 11;
             // 
             // ReporteFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 496);
+            this.ClientSize = new System.Drawing.Size(862, 496);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReporteFacturas";
             this.Text = "ReporteFacturas";

@@ -62,7 +62,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(819, 364);
+            this.reportViewer1.Size = new System.Drawing.Size(766, 364);
             this.reportViewer1.TabIndex = 0;
             // 
             // label1
@@ -77,7 +77,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
-            this.pictureBox6.Location = new System.Drawing.Point(704, 7);
+            this.pictureBox6.Location = new System.Drawing.Point(646, 7);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(51, 49);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,14 +103,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 59);
+            this.panel1.Size = new System.Drawing.Size(766, 59);
             this.panel1.TabIndex = 11;
             // 
             // Rpt_Verduras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 426);
+            this.ClientSize = new System.Drawing.Size(766, 426);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(2);
