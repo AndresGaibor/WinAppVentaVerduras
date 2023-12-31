@@ -275,7 +275,6 @@
     <EmbeddedResource Include="Reportes\Inf_ClientesGeneral.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_FacturaGeneral.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_VerdurasGenerales.rdlc" />
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Rpt_Verduras.resx">
       <DependentUpon>Rpt_Verduras.cs</DependentUpon>
     </EmbeddedResource>
