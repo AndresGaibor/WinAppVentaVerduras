@@ -19,7 +19,25 @@ namespace WinAppDiseños
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            Rpt_Verduras rpt_Verduras = new Rpt_Verduras();
+            rpt_Verduras.Show();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ReporteCliente rc = new ReporteCliente();
+            rc.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ReporteFacturas rf = new ReporteFacturas();
+            rf.Show();
         }
     }
 }

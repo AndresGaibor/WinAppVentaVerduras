@@ -23,8 +23,7 @@ namespace WinAppDiseños
         private void Pagina_principal_Load(object sender, EventArgs e)
         {
             Archivos archivos = new Archivos();
-            string[] listaNombres = { "Inventario.xml", "Clientes.xml", "Ventas.xml", "DetalleVentas.xml" };
-            archivos.crearArchivos(listaNombres);
+            archivos.crearArchivoXml();
         }
         public void RecibirInformacion(string informacion)
         {
@@ -75,6 +74,19 @@ namespace WinAppDiseños
             panel4.Visible= false;  
         }
         //Opcion4
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(width: 144, height: 131);
+            panel7.Visible = true;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(width: 124, height: 111);
+            panel7.Visible = false;
+        }
+
+        //Opcion5
         private void pictureBox5_MouseHover(object sender, EventArgs e)
         {
             pictureBox5.Size = new Size(width: 144, height: 131);
@@ -110,5 +122,13 @@ namespace WinAppDiseños
             MenuClientes mc = new MenuClientes();
             mc.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Reportes rp = new Reportes();
+            rp.Show();
+        }
+
+       
     }
 }

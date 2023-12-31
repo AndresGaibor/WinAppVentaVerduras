@@ -10,23 +10,18 @@ namespace WinAppDiseños
     internal class Archivos
     {
         public static string rutaDebug =  AppDomain.CurrentDomain.BaseDirectory;
-        public void crearArchivos(string[] nombres)
+        public void crearArchivoXml()
         {
-               for (int i = 0; i < nombres.Length; i++)
+            string archivo = Path.Combine(rutaDebug, "Inventario.xml");
+
+            // Verifica si el archivo ya existe
+            if (!File.Exists(archivo))
             {
-                string nombre = Path.Combine(rutaDebug, nombres[i]);
-
-
-                // Verifica si el archivo ya existe
-                if (!File.Exists(nombre))
-                {
-                    
-                        // Puedes agregar contenido al archivo aquí si lo deseas
-                        File.Create(nombre).Close();
-                    
-                }
-                
+                    // Puedes agregar contenido al archivo aquí si lo deseas
+                    File.Create(archivo).Close();
             }
+                
+            
         }
     }
 }

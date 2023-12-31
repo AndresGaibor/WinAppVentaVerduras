@@ -19,8 +19,13 @@ namespace WinAppDiseños
         int edadEnAnios;
         DateTime fechaNac;
 
-        public RegistroUsuario()
+        public RegistroUsuario(string ced = null)
         {
+            if(ced != null)
+            {
+                cedula = ced;
+            }
+
             InitializeComponent();
         }
 
@@ -106,7 +111,7 @@ namespace WinAppDiseños
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,9 +165,10 @@ namespace WinAppDiseños
 
                     dataSet11.Cliente.Rows.Add(vect);
 
-                    MessageBox.Show("Usuario Ingresado con éxito.");
-                    Console.WriteLine("---RegistroUsuario--- Usuario Ingresado con éxito.");
+                    MessageBox.Show("Cliente Ingresado con éxito.");
+                    Console.WriteLine("---RegistroUsuario--- Cliente Ingresado con éxito.");
                     dataSet11.WriteXml(Path.Combine(ruta, "Inventario.xml"));
+
                     this.Close();
                 }
 

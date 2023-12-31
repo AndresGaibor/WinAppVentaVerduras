@@ -1231,7 +1231,7 @@ namespace WinAppDiseños {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DetalleFactRow AddDetalleFactRow(int cantidad, double precio, double subtotal) {
+            public DetalleFactRow AddDetalleFactRow(FacturaRow parentFacturaRowByFactura_DetalleFact, VerduraRow parentVerduraRowByVerdura_DetalleFact, int cantidad, double precio, double subtotal) {
                 DetalleFactRow rowDetalleFactRow = ((DetalleFactRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1239,6 +1239,12 @@ namespace WinAppDiseños {
                         cantidad,
                         precio,
                         subtotal};
+                if ((parentFacturaRowByFactura_DetalleFact != null)) {
+                    columnValuesArray[0] = parentFacturaRowByFactura_DetalleFact[2];
+                }
+                if ((parentVerduraRowByVerdura_DetalleFact != null)) {
+                    columnValuesArray[1] = parentVerduraRowByVerdura_DetalleFact[0];
+                }
                 rowDetalleFactRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDetalleFactRow);
                 return rowDetalleFactRow;
@@ -1284,10 +1290,8 @@ namespace WinAppDiseños {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("DetalleFactKey1", new global::System.Data.DataColumn[] {
                                 this.columncodigoFact,
                                 this.columncodigover}, false));
-                this.columncodigoFact.AutoIncrement = true;
                 this.columncodigoFact.AutoIncrementSeed = 1;
                 this.columncodigoFact.AllowDBNull = false;
-                this.columncodigover.AutoIncrement = true;
                 this.columncodigover.AutoIncrementSeed = 1;
                 this.columncodigover.AllowDBNull = false;
                 this.columncantidad.DefaultValue = ((int)(1));

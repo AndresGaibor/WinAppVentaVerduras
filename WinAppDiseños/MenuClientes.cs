@@ -27,5 +27,23 @@ namespace WinAppDiseños
             RegistroUsuario registroUsuario = new RegistroUsuario();
             registroUsuario.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Buscar_Cliente buscar_Cliente = new Buscar_Cliente();
+            buscar_Cliente.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            EditarCliente editarCliente = new EditarCliente();
+            editarCliente.ShowDialog();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            EliminarCliente eliminarCliente = new EliminarCliente();
+            eliminarCliente.ShowDialog();
+        }
     }
 }

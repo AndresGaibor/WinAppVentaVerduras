@@ -31,7 +31,7 @@ namespace WinAppDiseños
         }
 
         int codigoCliente = 0; // consumidor final
-
+        int secuencia = 1;
         object[] detalleFactura;
 
         private void btnFacturar_Click(object sender, EventArgs e)
@@ -40,32 +40,59 @@ namespace WinAppDiseños
 
             // datos de la factura
             DateTime fecha = dTPFecha.Value.Date;
-            string secuenciaStr = txtSecuencia.Text;
+
+            if(this.dGVDetalleFactura.RowCount == 0)
+            {
+                MessageBox.Show("No hay productos en la factura");
+                return;
+            }
+
+            if(double.Parse(lblTotal.Text) > 50 && codigoCliente == 0)
+            {
+                MessageBox.Show("Facturas mayores a 50 dolares es obligatorio con datos");
+                this.txtCliente.Focus();
+                return;
+            }
 
             // codigo de verdura, cantidad, precio
            
 
             try
             {
-                /**
-                dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml"));
-                object[] vect = new object[5];
-                vect[0] = null;
-                vect[1] = textBox1.Text.Trim();
-                vect[2] = textBox3.Text.Trim();
-                vect[3] = Convert.ToDouble(textBox2.Text.Replace('.', ','));
-                vect[4] = textBox4.Text.Trim();
-                dataSet11.Verdura.Rows.Add(vect);
-                dataSet11.WriteXml(Path.Combine(ruta, "Inventario.xml"));
-                MessageBox.Show("Producto agregado correctamente");
+                //this.dataSet11.leerXml();
+                object[][] vect = new object[dGVDetalleFactura.Rows.Count][];
+                
+                foreach(DataGridViewRow fila in dGVDetalleFactura.Rows)
+                {
+                    if (fila.Cells["Codigo"].Value == null)
+                    {
+                        continue;
+                    }
+
+                    vect[fila.Index] = new object[5];
+                    vect[fila.Index][0] = this.secuencia;
+                    vect[fila.Index][1] = fila.Cells["Codigo"].Value;
+                    vect[fila.Index][2] = fila.Cells["cantidad"].Value;
+                    vect[fila.Index][3] = fila.Cells["precio"].Value;
+                    vect[fila.Index][4] = fila.Cells["Subtotal"].Value;
+                }
+
+                object[] factura = new object[4];
+                factura[0] = this.codigoCliente;
+                factura[1] = Convert.ToDouble(lblTotal.Text);
+                factura[2] = this.secuencia;
+                factura[3] = fecha;
+
+                dataSet11.generarFactura(factura, vect);
+                
+                MessageBox.Show("Factura agregado correctamente");
                 this.Close();
-                */
+                
             }
             catch (Exception ex)
             {
 
-                Console.WriteLine("--Facturar--" + ex.Message);
-                Console.WriteLine(ex);
+               MessageBox.Show("Error al agregar factura " + ex.Message);
             }
         }
 
@@ -102,9 +129,37 @@ namespace WinAppDiseños
                     return;
                 }
 
-                // buscar al cliente
+                object[] cliente = dataSet11.getClienteByCedula(cedulaStr);
 
-                // si existe renombrar el label cliente
+                if(cliente != null)
+                {
+                    this.codigoCliente = Convert.ToInt32(cliente[9]);
+                    this.lblCliente.Text = cliente[1].ToString() + " " + cliente[2].ToString();
+                } else
+                {
+                    RegistroUsuario rg = new RegistroUsuario();
+                    if(rg.ShowDialog() == DialogResult.OK)
+                    {
+                        object[] cliente2 = dataSet11.getClienteByCedula(cedulaStr);
+
+                        if (cliente2 != null)
+                        {
+                            this.codigoCliente = Convert.ToInt32(cliente2[9]);
+                            this.lblCliente.Text = cliente2[1].ToString() + " " + cliente2[2].ToString();
+                        } else
+                        {
+                            codigoCliente = 0;
+                            this.txtCliente.Clear();
+                            this.lblCliente.Text = "CONSUMIDOR FINAL";
+                        }
+                    } else
+                    {
+                        codigoCliente = 0;
+                        this.txtCliente.Clear();
+                        this.lblCliente.Text = "CONSUMIDOR FINAL";
+                    }
+                }
+
 
                 // si no existe llamar a la clase nuevo cliente
             }
@@ -113,7 +168,7 @@ namespace WinAppDiseños
 
         private void calcularTotal()
         {
-            int total = 0;
+            double total = 0;
             foreach(DataGridViewRow fila in dGVDetalleFactura.Rows)
             {
                 if (fila.Cells["Subtotal"].Value == null)
@@ -121,7 +176,7 @@ namespace WinAppDiseños
                     continue;
                 }
 
-                total += Convert.ToInt32(fila.Cells["Subtotal"].Value);
+                total += Convert.ToDouble(fila.Cells["Subtotal"].Value);
             }
 
             this.lblTotal.Text = total.ToString();
@@ -188,6 +243,15 @@ namespace WinAppDiseños
             dGVProductos.DataSource = dataSet11.Tables["Verdura"];
 
             dGVProductos.Refresh();
+
+            object[] ultimaFactura = dataSet11.getUltimaFactura();
+
+            if(ultimaFactura != null)
+            {
+                this.txtSecuencia.Text = (Convert.ToInt32(ultimaFactura[2]) + 1).ToString();
+                this.secuencia = Convert.ToInt32(ultimaFactura[2]) + 1;
+            }
+            
         }
 
         private void dGVDetalleFactura_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -221,7 +285,12 @@ namespace WinAppDiseños
                 }
                 else
                 {
-                    // the input is numeric 
+                    object[] producto = dataSet11.getVerduraByCodigo(Convert.ToInt32(this.dGVDetalleFactura.Rows[e.RowIndex].Cells["Codigo"].Value.ToString())); 
+                    if(producto != null && int.Parse(producto[4].ToString()) < i)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("No existe esa cantidad");
+                    }
                 }
             }
 
@@ -237,6 +306,40 @@ namespace WinAppDiseños
                     MessageBox.Show("Ingrese un numero");
                 }
             }
+        }
+
+        private void txtSecuencia_Validating(object sender, CancelEventArgs e)
+        {
+            int codigo = Convert.ToInt32(txtSecuencia.Text);
+            
+            object[] factura = dataSet11.getFacturaByCodigoFact(codigo);
+            if (factura != null)
+            {
+                   MessageBox.Show("Ya existe una factura con ese código");
+                   txtSecuencia.Clear();
+            }
+        }
+
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if(dGVDetalleFactura.CurrentRow == null)
+            {
+                return;
+            }
+
+            int filaSeleccionada = dGVDetalleFactura.CurrentRow.Index;
+            if(filaSeleccionada == -1)
+            {
+                return;
+            }
+
+            dGVDetalleFactura.Rows.RemoveAt(filaSeleccionada);
+        }
+
+        private void dGVDetalleFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
