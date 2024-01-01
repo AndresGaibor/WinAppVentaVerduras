@@ -54,6 +54,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Reporter, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Reporter.1.0.2\lib\net35\Reporter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -125,6 +128,12 @@
     <Compile Include="EliminarVentas.Designer.cs">
       <DependentUpon>EliminarVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCompraCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCompraCliente.Designer.cs">
+      <DependentUpon>ReporteCompraCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +203,12 @@
     </Compile>
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasFecha.Designer.cs">
+      <DependentUpon>ReporteVentasFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Rpt_Verduras.cs">
       <SubType>Form</SubType>
@@ -269,6 +284,10 @@
       <DependentUpon>ReporteCliente.cs</DependentUpon>
     </EmbeddedResource>
 
+    <EmbeddedResource Include="ReporteCompraCliente.resx">
+      <DependentUpon>ReporteCompraCliente.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="ReporteFacturas.resx">
       <DependentUpon>ReporteFacturas.cs</DependentUpon>
 
@@ -277,8 +296,13 @@
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Inf_ClientesGeneral.rdlc" />
+    <EmbeddedResource Include="Reportes\Inf_Compra_Cliente.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_FacturaGeneral.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_VerdurasGenerales.rdlc" />
+    <EmbeddedResource Include="Reportes\Inf_Ventas_Fecha.rdlc" />
+    <EmbeddedResource Include="ReporteVentasFecha.resx">
+      <DependentUpon>ReporteVentasFecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Verduras.resx">
       <DependentUpon>Rpt_Verduras.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +321,7 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Reportes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
