@@ -61,7 +61,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.Controls.Add(this.label5);
 
-            this.panel1.Controls.Add(this.pictureBox7);
+            //this.panel1.Controls.Add(this.pictureBox7);
 
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label1);
