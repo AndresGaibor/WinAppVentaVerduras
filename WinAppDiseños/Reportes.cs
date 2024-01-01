@@ -29,15 +29,18 @@ namespace WinAppDiseños
             rc.Show();
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+
+        private void btnBack_Click(object sender, EventArgs e)
+
         {
             this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ReporteFactura reporteFactura = new ReporteFactura();
-            reporteFactura.ShowDialog();
+
+            ReporteFacturas rf = new ReporteFacturas();
+            rf.Show();
         }
     }
 }
