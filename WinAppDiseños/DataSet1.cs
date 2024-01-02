@@ -20,6 +20,10 @@ namespace WinAppDiseños
         {
             this.ReadXml(archivoXml);
         }
+        public void leerXmlCompraCliente()
+        {
+            this.ReadXml(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rpt_cm_cl.xml"));
+        }
 
         public void guardarXml()
         {
@@ -98,6 +102,13 @@ namespace WinAppDiseños
                 return null;
             }
         }
+        public DataRow[] getFacturasByCedula(int codigoCli)
+        {
+            DataRow[] vect = null;
+            vect = this.Factura.Select($"codigocli = {codigoCli}");
+
+            return vect;
+        }  
 
         public object[] getVerduraByCodigo(int codigo)
         {

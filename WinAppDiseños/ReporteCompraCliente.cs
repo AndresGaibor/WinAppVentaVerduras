@@ -20,7 +20,8 @@ namespace WinAppDiseños
 
         private void ReporteCompraCliente_Load(object sender, EventArgs e)
         {
-
+            CargarComboBox();
+            this.dataSet1.leerXml();
             this.reportViewer1.RefreshReport();
         }
 
@@ -71,6 +72,26 @@ namespace WinAppDiseños
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        void CargarComboBox()
+        {
+            try
+            {
+                if (dataSet1 != null && dataSet1.Tables.Count > 0)
+                {
+                    DataTable tabla = dataSet1.Cliente;
+
+                    foreach (DataRow fila in tabla.Rows)
+                    {
+                        CmBox_Ced.Items.Add(fila["cedula"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar cédulas en el ComboBox: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
