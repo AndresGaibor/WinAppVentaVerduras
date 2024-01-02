@@ -299,6 +299,7 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Informe_VentasporFecha.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_ClientesGeneral.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_Compra_Cliente.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_FacturaGeneral.rdlc" />

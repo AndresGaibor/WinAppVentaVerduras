@@ -24,6 +24,7 @@ namespace WinAppDiseños
             this.dataSet1.leerXml();
 
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
