@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -133,13 +134,17 @@ namespace WinAppDiseños
 
         private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
         {
-            string rutaArchivoHTML = "C:\\Users\\pkevi\\source\\repos\\WinAppVentaVerduras\\WinAppDiseños\\bin\\Debug\\Acerca de\\ACERCA DE ARCHIVOS2.htm"; // Ruta completa del archivo HTML
+            string rutaCarpetaDebug = Application.StartupPath;
+            string rutaCarpetaImgDebug = Path.Combine(rutaCarpetaDebug, "ACERCA DE ARCHIVOS2_archivos"); // Ruta de la carpeta de imágenes
+
+            // Combinar la ruta de la carpeta debug con el nombre del archivo HTML
+            string rutaArchivoHTML = Path.Combine(rutaCarpetaDebug, "ACERCA DE ARCHIVOS2.htm");
 
             try
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo(rutaArchivoHTML);
-                startInfo.WorkingDirectory = "C:\\Users\\pkevi\\source\\repos\\WinAppVentaVerduras\\WinAppDiseños\\bin\\Debug\\ACERCA DE ARCHIVOS2_archivos"; // Ruta donde se encuentran las imágenes
-                Process.Start(startInfo);
+                startInfo.WorkingDirectory = rutaCarpetaImgDebug; 
+                Process.Start(startInfo); // Iniciar el proceso con la información proporcionada
             }
             catch (Exception ex)
             {
