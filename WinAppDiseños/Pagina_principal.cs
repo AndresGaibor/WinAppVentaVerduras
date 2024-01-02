@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace WinAppDiseños
 {
@@ -129,6 +132,25 @@ namespace WinAppDiseños
             rp.Show();
         }
 
-       
+        private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
+        {
+            string rutaCarpetaDebug = Application.StartupPath;
+            string rutaCarpetaImgDebug = Path.Combine(rutaCarpetaDebug, "ACERCA DE ARCHIVOS2_archivos"); // Ruta de la carpeta de imágenes
+
+            // Combinar la ruta de la carpeta debug con el nombre del archivo HTML
+            string rutaArchivoHTML = Path.Combine(rutaCarpetaDebug, "ACERCA DE ARCHIVOS2.htm");
+
+            try
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo(rutaArchivoHTML);
+                startInfo.WorkingDirectory = rutaCarpetaImgDebug; 
+                Process.Start(startInfo); // Iniciar el proceso con la información proporcionada
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el archivo HTML: " + ex.Message);
+            }
+
+        }
     }
 }
