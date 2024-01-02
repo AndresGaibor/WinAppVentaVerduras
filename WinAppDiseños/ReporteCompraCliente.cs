@@ -43,10 +43,13 @@ namespace WinAppDiseños
         private void CmBox_Ced_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtén el valor seleccionado en el ComboBox
-            string valorFiltro = CmBox_Ced.SelectedItem.ToString();
+            string cedula = CmBox_Ced.SelectedItem.ToString();
 
             // Llama a un método que genera y muestra el informe con el filtro
-            MostrarInformeConFiltro(valorFiltro);
+
+
+
+            MostrarInformeConFiltro(cedula);
         }
 
         private void MostrarInformeConFiltro(string valorFiltro)
