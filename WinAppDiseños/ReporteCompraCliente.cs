@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,35 @@ namespace WinAppDiseños
         }
 
         private void CmBox_Ced_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtén el valor seleccionado en el ComboBox
+            string valorFiltro = CmBox_Ced.SelectedItem.ToString();
+
+            // Llama a un método que genera y muestra el informe con el filtro
+            MostrarInformeConFiltro(valorFiltro);
+        }
+
+        private void MostrarInformeConFiltro(string valorFiltro)
+        {
+            // Configura el ReportViewer y establece el filtro
+            reportViewer1.Reset();
+            reportViewer1.LocalReport.ReportPath = "Reportes\\Inf_Compra_Cliente.rdlc"; 
+
+            // Agrega parámetros al informe (puedes tener más según tus necesidades)
+            ReportParameter[] parametros = new ReportParameter[1];
+            parametros[0] = new ReportParameter("ParametroFiltro", valorFiltro);
+            reportViewer1.LocalReport.SetParameters(parametros);
+
+            // Actualiza y muestra el informe
+            reportViewer1.RefreshReport();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }

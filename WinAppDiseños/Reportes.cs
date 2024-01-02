@@ -39,5 +39,22 @@ namespace WinAppDiseños
             ReporteFacturas rf = new ReporteFacturas();
             rf.Show();
         }
+
+        private void Reportes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            ReporteVentasFecha rf = new ReporteVentasFecha();
+            rf.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            ReporteCompraCliente rf = new ReporteCompraCliente();
+            rf.Show();
+        }
     }
 }
