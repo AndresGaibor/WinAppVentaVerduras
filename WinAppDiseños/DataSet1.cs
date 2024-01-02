@@ -108,7 +108,7 @@ namespace WinAppDiseños
             vect = this.Factura.Select($"codigocli = {codigoCli}");
 
             return vect;
-        }  
+        }
 
         public object[] getVerduraByCodigo(int codigo)
         {
