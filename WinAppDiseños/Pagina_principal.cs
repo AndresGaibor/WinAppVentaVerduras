@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace WinAppDiseños
 {
@@ -129,6 +131,21 @@ namespace WinAppDiseños
             rp.Show();
         }
 
-       
+        private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
+        {
+            string rutaArchivoHTML = "C:\\Users\\pkevi\\source\\repos\\WinAppVentaVerduras\\WinAppDiseños\\bin\\Debug\\Acerca de\\ACERCA DE ARCHIVOS2.htm"; // Ruta completa del archivo HTML
+
+            try
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo(rutaArchivoHTML);
+                startInfo.WorkingDirectory = "C:\\Users\\pkevi\\source\\repos\\WinAppVentaVerduras\\WinAppDiseños\\bin\\Debug\\ACERCA DE ARCHIVOS2_archivos"; // Ruta donde se encuentran las imágenes
+                Process.Start(startInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el archivo HTML: " + ex.Message);
+            }
+
+        }
     }
 }
