@@ -32,23 +32,31 @@ namespace WinAppDiseños
         {
             try
             {
-                string ruta = AppDomain.CurrentDomain.BaseDirectory;
+                if(Convert.ToDouble( textBox2.Text) >0 && Convert.ToInt32(textBox4.Text) >0)
+                {
+                    string ruta = AppDomain.CurrentDomain.BaseDirectory;
 
-                dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml"));
-                object[] vect = new object[5];
-                vect[0] = null;
-                vect[1] = textBox1.Text.Trim();
-                vect[2] = textBox3.Text.Trim();
-                vect[3] = Convert.ToDouble(textBox2.Text.Replace('.', ','));
-                vect[4] = textBox4.Text.Trim();
-                dataSet11.Verdura.Rows.Add(vect);
-                dataSet11.WriteXml(Path.Combine(ruta, "Inventario.xml"));
-                MessageBox.Show("Producto agregado correctamente");
-                this.Close();
+                    dataSet11.ReadXml(Path.Combine(ruta, "Inventario.xml"));
+                    object[] vect = new object[5];
+                    vect[0] = null;
+                    vect[1] = textBox1.Text.Trim();
+                    vect[2] = textBox3.Text.Trim();
+                    vect[3] = Convert.ToDouble(textBox2.Text.Replace('.', ','));
+                    vect[4] = textBox4.Text.Trim();
+                    dataSet11.Verdura.Rows.Add(vect);
+                    dataSet11.WriteXml(Path.Combine(ruta, "Inventario.xml"));
+                    MessageBox.Show("Producto agregado correctamente");
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("Precio y Producto deben ser mayores que 0");
+                }
+                
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
                 Console.WriteLine("--InsertarDatos--" + ex.Message);
                 Console.WriteLine(ex);
             }

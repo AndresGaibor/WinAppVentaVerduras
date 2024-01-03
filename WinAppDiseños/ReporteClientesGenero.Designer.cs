@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.Parametros = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -66,7 +64,7 @@
             this.Parametros.Size = new System.Drawing.Size(324, 263);
             this.Parametros.TabIndex = 0;
             this.Parametros.TabStop = false;
-            this.Parametros.Text = "Parametros";
+            this.Parametros.Text = "Parámetros";
             this.Parametros.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
@@ -76,9 +74,9 @@
             this.label1.Location = new System.Drawing.Point(51, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(90, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Género";
+            this.label1.Text = "Género:";
             // 
             // radioButton2
             // 
