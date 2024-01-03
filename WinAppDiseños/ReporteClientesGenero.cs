@@ -92,7 +92,6 @@ namespace WinAppDiseños
                 foreach(DataRow cliente in clientes)
                 {
                     codigoscli.Add(cliente["codigocli"].ToString());
-                    
                 }
 
 

@@ -169,14 +169,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.facturaBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.clienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinAppDiseños.Reportes.Inf_Venta_Genero.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(331, 92);
+            this.reportViewer1.Location = new System.Drawing.Point(403, 125);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(929, 673);
