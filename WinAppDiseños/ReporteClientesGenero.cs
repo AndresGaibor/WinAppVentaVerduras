@@ -32,7 +32,7 @@ namespace WinAppDiseños
         }
 
 
-        private void MostrarInformeConFiltro(string genero)
+        private void MostrarInformeConFiltro(char genero)
         {
             if (true)
             {
@@ -67,7 +67,7 @@ namespace WinAppDiseños
 
         }
 
-        private DataSet GetFilteredDataSet(string genero)
+        private DataSet GetFilteredDataSet(char genero)
         {
             // Create a new DataSet to hold the filtered data
             DataSet filteredDataSet = new DataSet();
@@ -78,7 +78,7 @@ namespace WinAppDiseños
                 DataTable originalTable1 = dataSet1.Tables["Cliente"];
                 DataView view1 = new DataView(originalTable1);
                 
-                view1.RowFilter = $"genero = '({genero})'";
+                view1.RowFilter = $"genero = '{genero}'";
 
                 DataTable filteredTable1 = view1.ToTable();
                 filteredDataSet.Tables.Add(filteredTable1);
@@ -118,7 +118,7 @@ namespace WinAppDiseños
         {
             if (radioButton1.Checked)
             {
-                MostrarInformeConFiltro("M");
+                MostrarInformeConFiltro('M');
             }
         }
 
@@ -126,7 +126,7 @@ namespace WinAppDiseños
         {
             if(radioButton2.Checked)
             {
-                MostrarInformeConFiltro("F");
+                MostrarInformeConFiltro('F');
             }
         }
     }
