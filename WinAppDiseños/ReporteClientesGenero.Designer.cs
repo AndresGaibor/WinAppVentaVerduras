@@ -137,13 +137,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(194, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(597, 47);
+            this.label2.Size = new System.Drawing.Size(568, 47);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Reporte de compras por cliente";
+            this.label2.Text = "Reporte de ventas por género";
             // 
             // pictureBox6
             // 
@@ -175,11 +176,10 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinAppDiseños.Reportes.Inf_Venta_Genero.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(302, 100);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer1.Location = new System.Drawing.Point(331, 92);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(962, 664);
+            this.reportViewer1.Size = new System.Drawing.Size(929, 673);
             this.reportViewer1.TabIndex = 15;
             // 
             // dataSet1

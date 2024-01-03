@@ -28,6 +28,7 @@ namespace WinAppDiseños
         {
             this.dataSet1.leerXml();
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
 
@@ -40,7 +41,7 @@ namespace WinAppDiseños
 
                 // Configure the ReportViewer
                 reportViewer1.Reset();
-                reportViewer1.LocalReport.ReportPath = Path.Combine(Archivos.rutaDebug, "../../Reportes/Informe_VentasporFecha.rdlc");
+                reportViewer1.LocalReport.ReportPath = Path.Combine(Archivos.rutaDebug, "../../Reportes/Inf_Venta_Genero.rdlc");
 
 
                 // Set the data source for the report to the filtered dataset
