@@ -25,7 +25,7 @@ namespace WinAppDiseños
             Rpt_Verduras rpt_Verduras = new Rpt_Verduras();
             rpt_Verduras.Show();
         }
-
+        //jijij
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReporteCliente rc = new ReporteCliente();
