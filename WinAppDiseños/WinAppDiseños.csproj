@@ -128,12 +128,6 @@
     <Compile Include="EliminarVentas.Designer.cs">
       <DependentUpon>EliminarVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteClientesGenero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteClientesGenero.Designer.cs">
-      <DependentUpon>ReporteClientesGenero.cs</DependentUpon>
-    </Compile>
     <Compile Include="ReporteCompraCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,9 +281,6 @@
     <EmbeddedResource Include="ReporteCliente.resx">
       <DependentUpon>ReporteCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteClientesGenero.resx">
-      <DependentUpon>ReporteClientesGenero.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReporteCompraCliente.resx">
       <DependentUpon>ReporteCompraCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,11 +290,9 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Informe_VentasporFecha.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_ClientesGeneral.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_Compra_Cliente.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_FacturaGeneral.rdlc" />
-    <EmbeddedResource Include="Reportes\Inf_Venta_Genero.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_VerdurasGenerales.rdlc" />
     <EmbeddedResource Include="Reportes\Inf_Ventas_Fecha.rdlc" />
     <EmbeddedResource Include="ReporteVentasFecha.resx">
@@ -327,9 +316,7 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\ReporteCompraCliente.datasource" />
     <None Include="Properties\DataSources\Reportes.datasource" />
-    <None Include="Properties\DataSources\ReporteVentasFecha.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
