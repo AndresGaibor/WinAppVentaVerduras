@@ -139,6 +139,7 @@
             // 
             this.btn_Cancelar.BackColor = System.Drawing.Color.Salmon;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.btn_Cancelar.Location = new System.Drawing.Point(579, 273);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(106, 40);
@@ -153,18 +154,22 @@
             this.txtGenero.Items.AddRange(new object[] {
             "M",
             "F"});
+
             this.txtGenero.Location = new System.Drawing.Point(518, 172);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(168, 21);
+
             this.txtGenero.TabIndex = 121;
             // 
             // btn_Aceptar
             // 
             this.btn_Aceptar.BackColor = System.Drawing.Color.LightGreen;
             this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.btn_Aceptar.Location = new System.Drawing.Point(437, 273);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(106, 40);
+
             this.btn_Aceptar.TabIndex = 116;
             this.btn_Aceptar.Text = "Aceptar";
             this.btn_Aceptar.UseVisualStyleBackColor = false;
@@ -176,9 +181,11 @@
             this.txtEstado.Items.AddRange(new object[] {
             "S",
             "C"});
+
             this.txtEstado.Location = new System.Drawing.Point(518, 117);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(168, 21);
+
             this.txtEstado.TabIndex = 120;
             // 
             // txtCiudad
@@ -194,52 +201,66 @@
             "Baños",
             "Guaranda",
             "Babahoyo"});
+
             this.txtCiudad.Location = new System.Drawing.Point(516, 226);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(168, 21);
+
             this.txtCiudad.TabIndex = 119;
             // 
             // txtDireccion
             // 
+
             this.txtDireccion.Location = new System.Drawing.Point(516, 66);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(170, 20);
+
             this.txtDireccion.TabIndex = 118;
             // 
             // txtEmail
             // 
+
             this.txtEmail.Location = new System.Drawing.Point(516, 14);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(170, 20);
+
             this.txtEmail.TabIndex = 117;
             // 
             // txtApellido
             // 
+
             this.txtApellido.Location = new System.Drawing.Point(134, 118);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(170, 20);
+
             this.txtApellido.TabIndex = 116;
             // 
             // txtNombre
             // 
+
             this.txtNombre.Location = new System.Drawing.Point(134, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(170, 20);
+
             this.txtNombre.TabIndex = 115;
             // 
             // txtCedula
             // 
+
             this.txtCedula.Location = new System.Drawing.Point(134, 14);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(170, 20);
+
             this.txtCedula.TabIndex = 114;
             // 
             // dateTimePicker1
             // 
+
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 174);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(217, 20);
+
             this.dateTimePicker1.TabIndex = 113;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -276,10 +297,12 @@
             // txtEdad
             // 
             this.txtEdad.AutoSize = true;
+
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.Location = new System.Drawing.Point(130, 226);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(75, 24);
+
             this.txtEdad.TabIndex = 104;
             this.txtEdad.Text = "Cédula:";
             // 

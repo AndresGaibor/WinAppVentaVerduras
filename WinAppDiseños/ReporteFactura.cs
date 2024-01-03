@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace WinAppDiseños
 {
-    public partial class ReporteGenero : Form
+    public partial class ReporteFactura : Form
     {
-        public ReporteGenero()
+        public ReporteFactura()
         {
             InitializeComponent();
+        }
+
+        private void ReporteFactura_Load(object sender, EventArgs e)
+        {
+            this.dataSet1.leerXml();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
