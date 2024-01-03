@@ -81,6 +81,29 @@ namespace WinAppDiseños
             }
         }
 
+        public DataRow[] getFacturaByFecha(string fechacompra)
+        {
+            //object[][] res = new object[4];
+
+            System.Data.DataRow[] vect;
+            vect = this.Factura.Select($"fechacompra = '{fechacompra}'");
+
+            return vect;
+            //if (vect.Length > 0)
+            //{
+            //    res[0] = vect[0]["codigocli"].ToString();
+            //    res[1] = vect[0]["total"].ToString();
+            //    res[2] = vect[0]["codigoFact"].ToString();
+            //    res[3] = vect[0]["fechacompra"].ToString();
+
+            //    return res;
+            //}
+            //else
+            //{
+            //    return null;
+            //}
+        }
+
         public object[] getFacturaByCodigoFact(int codigo)
         {
             object[] res = new object[4];

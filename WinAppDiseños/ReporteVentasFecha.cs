@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinAppDiseños.Properties;
 
 namespace WinAppDiseños
 {
@@ -61,15 +62,15 @@ namespace WinAppDiseños
 
                 // Configure the ReportViewer
                 reportViewer1.Reset();
-                reportViewer1.LocalReport.ReportPath = Path.Combine(Archivos.rutaDebug, "../../Reportes/Inf_Ventas_Fecha.rdlc");
+                reportViewer1.LocalReport.ReportPath = Path.Combine(Archivos.rutaDebug, "../../Reportes/Informe_VentasporFecha.rdlc");
 
 
                 // Set the data source for the report to the filtered dataset
                 if (filteredDataSet.Tables.Count >= 2)
                 {
                     // Set the data source for the report to the filtered datasets
-                    ReportDataSource rds1 = new ReportDataSource("DataSet1", filteredDataSet.Tables["Factura"]);
-                    ReportDataSource rds2 = new ReportDataSource("DataSet2", filteredDataSet.Tables["Cliente"]);
+                    ReportDataSource rds1 = new ReportDataSource("DataSet1", filteredDataSet.Tables["Cliente"]);
+                    ReportDataSource rds2 = new ReportDataSource("DataSet2", filteredDataSet.Tables["Factura"]);
                     reportViewer1.LocalReport.DataSources.Clear();
                     reportViewer1.LocalReport.DataSources.Add(rds1);
                     reportViewer1.LocalReport.DataSources.Add(rds2);
@@ -94,24 +95,39 @@ namespace WinAppDiseños
 
             try
             {
+                DataRow[] facturas = dataSet1.getFacturaByFecha(fechacompra.ToString());
+                List<string> busqueda = new List<string>();
+                foreach (DataRow factura in facturas)
+                {
+                    busqueda.Add(factura["codigocli"].ToString());
+                }
+                string[] strings = busqueda.ToArray();
                 // Filter the Cliente data
                 DataTable originalTable1 = dataSet1.Tables["Cliente"];
-                //DataView view1 = new DataView(originalTable1);
-                //view1.RowFilter = $"cedula = '{cedula}'";  // Adjust the filter to match your dataset's structure
-                //DataTable filteredTable1 = view1.ToTable();
-                filteredDataSet.Tables.Add(originalTable1);
+                DataView view1 = new DataView(originalTable1);
+                string joined = string.Join(",", busqueda);
+                string filterExpression = string.Join(" OR ", busqueda.Select(c => $"codigocli = {c}"));
+                view1.RowFilter = filterExpression;
+                //view1.RowFilter = $"codigocli IN ({joined})";  // Adjust the filter to match your dataset's structure
+                
+                DataTable filteredTable1 = view1.ToTable();
+                //DataTable ab = dataSet1.Cliente.Where(c =>
+                //{ return busqueda.Contains(c.codigocli.ToString()); }).CopyToDataTable();
+            
+                //filteredDataSet.Tables.Add(ab);
+                filteredDataSet.Tables.Add(filteredTable1);
 
                 // Filter the Factura data
                 DataTable originalTable2 = dataSet1.Tables["Factura"];
                 DataView view2 = new DataView(originalTable2);
                 
-                view2.RowFilter = $"fechacompra = {fechacompra}";  // Adjust the filter to match your dataset's structure
+                view2.RowFilter = $"fechacompra = '{fechacompra.ToString()}'";  // Adjust the filter to match your dataset's structure
                 DataTable filteredTable2 = view2.ToTable();
                 filteredDataSet.Tables.Add(filteredTable2);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error filtering dataset: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error filtering dataset: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return filteredDataSet;
