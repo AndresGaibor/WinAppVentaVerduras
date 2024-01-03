@@ -32,7 +32,7 @@ namespace WinAppDiseños
                 vect = dataSet11.Verdura.Select("codigover =" + textBox1.Text.Trim());
                 vect1 = dataSet11.DetalleFact.Select("codigover =" + textBox1.Text.Trim());
 
-                if (vect.Length > 0 && vect1 == null)
+                if (vect.Length > 0 && vect1.Length==0)
                 {
                     nombre.Text = vect[0]["nombre"].ToString();
                     distribuidora.Text = vect[0]["distribuidora"].ToString();
@@ -42,7 +42,7 @@ namespace WinAppDiseños
                     panel2.Visible = true;
                 }
 
-                else if(vect1 != null) MessageBox.Show("No se puede eliminar la verdura porque está en una factura.");
+                else if(vect1.Length !=0) MessageBox.Show("No se puede eliminar la verdura porque está en una factura.");
                 
                 else
                 {
