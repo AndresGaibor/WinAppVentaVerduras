@@ -24,10 +24,5 @@ namespace WinAppDiseños
             this.dataSet11.leerXml();
             this.reportViewer1.RefreshReport();
         }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }
