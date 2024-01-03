@@ -81,6 +81,12 @@ namespace WinAppDiseños
             }
         }
 
+        public DataRow[] getClientesByGenero(string gen = "M")
+        {
+            DataRow[] vect = this.Cliente.Select($"genero = '{gen}'");
+            return vect;
+        }
+
         public DataRow[] getFacturaByFecha(string fechacompra)
         {
             //object[][] res = new object[4];

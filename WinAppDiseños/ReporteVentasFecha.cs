@@ -105,7 +105,7 @@ namespace WinAppDiseños
                 // Filter the Cliente data
                 DataTable originalTable1 = dataSet1.Tables["Cliente"];
                 DataView view1 = new DataView(originalTable1);
-                string joined = string.Join(",", busqueda);
+                
                 string filterExpression = string.Join(" OR ", busqueda.Select(c => $"codigocli = {c}"));
                 view1.RowFilter = filterExpression;
                 //view1.RowFilter = $"codigocli IN ({joined})";  // Adjust the filter to match your dataset's structure

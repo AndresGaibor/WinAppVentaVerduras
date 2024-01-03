@@ -38,10 +38,12 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSet11 = new WinAppDiseños.DataSet1();
             this.Parametros.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // Parametros
@@ -50,11 +52,11 @@
             this.Parametros.Controls.Add(this.radioButton2);
             this.Parametros.Controls.Add(this.radioButton1);
             this.Parametros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parametros.Location = new System.Drawing.Point(0, 92);
-            this.Parametros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Parametros.Location = new System.Drawing.Point(0, 115);
+            this.Parametros.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Parametros.Name = "Parametros";
-            this.Parametros.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Parametros.Size = new System.Drawing.Size(324, 263);
+            this.Parametros.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Parametros.Size = new System.Drawing.Size(432, 329);
             this.Parametros.TabIndex = 0;
             this.Parametros.TabStop = false;
             this.Parametros.Text = "Parametros";
@@ -64,10 +66,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 63);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(68, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Género";
             // 
@@ -75,27 +77,29 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(69, 189);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton2.Location = new System.Drawing.Point(92, 236);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 29);
+            this.radioButton2.Size = new System.Drawing.Size(165, 35);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Femenino";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(69, 138);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton1.Location = new System.Drawing.Point(92, 172);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 29);
+            this.radioButton1.Size = new System.Drawing.Size(167, 35);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Masculino";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // panel1
             // 
@@ -106,19 +110,19 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 91);
+            this.panel1.Size = new System.Drawing.Size(1680, 114);
             this.panel1.TabIndex = 14;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::WinAppDiseños.Properties.Resources.retroceder;
-            this.pictureBox7.Location = new System.Drawing.Point(36, 11);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox7.Location = new System.Drawing.Point(48, 14);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(75, 72);
+            this.pictureBox7.Size = new System.Drawing.Size(100, 90);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 33;
             this.pictureBox7.TabStop = false;
@@ -127,20 +131,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(194, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(259, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(597, 47);
+            this.label2.Size = new System.Drawing.Size(778, 63);
             this.label2.TabIndex = 13;
             this.label2.Text = "Reporte de compras por cliente";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
-            this.pictureBox6.Location = new System.Drawing.Point(969, 11);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Location = new System.Drawing.Point(1292, 14);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 75);
+            this.pictureBox6.Size = new System.Drawing.Size(101, 94);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
@@ -149,31 +153,36 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 31);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(64, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 40);
+            this.label3.Size = new System.Drawing.Size(0, 55);
             this.label3.TabIndex = 2;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(302, 100);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer1.Location = new System.Drawing.Point(403, 125);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(962, 664);
+            this.reportViewer1.Size = new System.Drawing.Size(1282, 830);
             this.reportViewer1.TabIndex = 15;
+            // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ReporteClientesGenero
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 778);
+            this.ClientSize = new System.Drawing.Size(1680, 954);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Parametros);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1286, 834);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximumSize = new System.Drawing.Size(1706, 1025);
             this.Name = "ReporteClientesGenero";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ReporteClientesGenero_Load);
@@ -183,6 +192,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +209,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSet1 dataSet11;
     }
 }
