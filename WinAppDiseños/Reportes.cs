@@ -15,8 +15,9 @@ namespace WinAppDiseños
         public Reportes()
         {
             InitializeComponent();
+            //JIJIJIJIDA
         }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Rpt_Verduras rpt_Verduras = new Rpt_Verduras();
