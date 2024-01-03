@@ -16,6 +16,7 @@ namespace WinAppDiseños
         {
             InitializeComponent();
             //JIJIJIJIDA
+            //Rata
         }
         
         private void pictureBox2_Click(object sender, EventArgs e)
