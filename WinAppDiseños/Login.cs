@@ -12,6 +12,9 @@ namespace WinAppDiseños
         String usuario1 = "Andres";
         String usuario2 = "Josue";
         String usuario3 = "Erick";
+        String usuario5 = "Franklin";
+        String usuario6 = "Alex";
+        String usuario7 = "Lorena";
         string contra = "1234";
 
         public Login()
@@ -129,7 +132,7 @@ namespace WinAppDiseños
         {
             try
             {
-                if (textBox1.Text == usuario1 || textBox1.Text == usuario2 || textBox1.Text == usuario3 || textBox1.Text == usuario4 && textBox2.Text == contra)
+                if (textBox1.Text == usuario1 || textBox1.Text == usuario2 || textBox1.Text == usuario3 || textBox1.Text == usuario4 || textBox1.Text == usuario5 || textBox1.Text == usuario6 || textBox1.Text == usuario7 || textBox2.Text == contra)
                 {
                     Pagina_principal objetopin = new Pagina_principal();
 
@@ -164,10 +167,16 @@ namespace WinAppDiseños
         }
 
         private void Login_Load(object sender, EventArgs e)
-        {
+        { 
+            /*
             // bypass para no estar ingresando usuario y contrasenia durante las pruebas
             Pagina_principal objetopin = new Pagina_principal();
-            objetopin.ShowDialog();
+            objetopin.ShowDialog();*/
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
