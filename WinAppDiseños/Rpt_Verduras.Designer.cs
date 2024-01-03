@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+
             this.verduraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new WinAppDiseños.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -75,9 +76,12 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 2;
+
             // 
-            // pictureBox6
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+
             this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
             this.pictureBox6.Location = new System.Drawing.Point(646, 7);
             this.pictureBox6.Name = "pictureBox6";
@@ -108,6 +112,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 59);
             this.panel1.TabIndex = 11;
+
             // 
             // pictureBox7
             // 
@@ -125,6 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(766, 426);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
@@ -137,7 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+
             this.ResumeLayout(false);
 
         }
@@ -146,10 +152,11 @@
         private DataSet1 dataSet11;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource verduraBindingSource;
+
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox7;
+
     }
 }

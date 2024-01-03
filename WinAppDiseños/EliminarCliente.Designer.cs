@@ -140,11 +140,13 @@
             // label10
             // 
             this.label10.AutoSize = true;
+
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Firebrick;
             this.label10.Location = new System.Drawing.Point(395, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(331, 24);
+
             this.label10.TabIndex = 114;
             this.label10.Text = "¿Está seguro de eliminar este Cliente?";
             // 
@@ -154,9 +156,11 @@
             this.BTN_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BTN_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.BTN_Eliminar.Location = new System.Drawing.Point(509, 291);
             this.BTN_Eliminar.Name = "BTN_Eliminar";
             this.BTN_Eliminar.Size = new System.Drawing.Size(106, 40);
+
             this.BTN_Eliminar.TabIndex = 113;
             this.BTN_Eliminar.Text = "Eliminar";
             this.BTN_Eliminar.UseVisualStyleBackColor = false;

@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace WinAppDiseños
 {
-    public partial class Rpt_Verduras : Form
+    public partial class ReporteFactura : Form
     {
-        public Rpt_Verduras()
+        public ReporteFactura()
         {
             InitializeComponent();
         }
 
-        private void Rpt_Verduras_Load(object sender, EventArgs e)
+        private void ReporteFactura_Load(object sender, EventArgs e)
         {
-
-            // guardar el xml por defecto del dataset
-            this.dataSet11.leerXml();
+            this.dataSet1.leerXml();
             this.reportViewer1.RefreshReport();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace WinAppDiseños
             vd.Show();
         }
 
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             BuscarVentas bv = new BuscarVentas();
@@ -43,6 +44,41 @@ namespace WinAppDiseños
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
