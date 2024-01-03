@@ -197,6 +197,9 @@ namespace WinAppDiseños
             try
             {
                 Cedula comprCedula = new Cedula(textBox1.Text);
+                if(textBox1.Text.Length > 10) {
+                    throw new Exception("Rata");
+                }
                 if (!comprCedula.ComprobarCedula())
                 {
                     MessageBox.Show("Cédula inválida.");

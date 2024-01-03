@@ -20,6 +20,10 @@ namespace WinAppDiseños
         {
             this.ReadXml(archivoXml);
         }
+        public void leerXmlCompraCliente()
+        {
+            this.ReadXml(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rpt_cm_cl.xml"));
+        }
 
         public void guardarXml()
         {
@@ -77,6 +81,35 @@ namespace WinAppDiseños
             }
         }
 
+        public DataRow[] getClientesByGenero(string gen = "M")
+        {
+            DataRow[] vect = this.Cliente.Select($"genero = '{gen}'");
+            return vect;
+        }
+
+        public DataRow[] getFacturaByFecha(string fechacompra)
+        {
+            //object[][] res = new object[4];
+
+            System.Data.DataRow[] vect;
+            vect = this.Factura.Select($"fechacompra = '{fechacompra}'");
+
+            return vect;
+            //if (vect.Length > 0)
+            //{
+            //    res[0] = vect[0]["codigocli"].ToString();
+            //    res[1] = vect[0]["total"].ToString();
+            //    res[2] = vect[0]["codigoFact"].ToString();
+            //    res[3] = vect[0]["fechacompra"].ToString();
+
+            //    return res;
+            //}
+            //else
+            //{
+            //    return null;
+            //}
+        }
+
         public object[] getFacturaByCodigoFact(int codigo)
         {
             object[] res = new object[4];
@@ -97,6 +130,13 @@ namespace WinAppDiseños
             {
                 return null;
             }
+        }
+        public DataRow[] getFacturasByCedula(int codigoCli)
+        {
+            DataRow[] vect = null;
+            vect = this.Factura.Select($"codigocli = {codigoCli}");
+
+            return vect;
         }
 
         public object[] getVerduraByCodigo(int codigo)

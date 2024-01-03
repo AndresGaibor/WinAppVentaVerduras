@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetVntFecha" targetNamespace="http://tempuri.org/DataSetVntFecha.xsd" xmlns:mstns="http://tempuri.org/DataSetVntFecha.xsd" xmlns="http://tempuri.org/DataSetVntFecha.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetVntFecha" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetVntFecha" msprop:Generator_DataSetName="DataSetVntFecha">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableVarName="tableCliente" msprop:Generator_UserTableName="Cliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cedula" msprop:Generator_ColumnPropNameInRow="cedula" msprop:Generator_ColumnPropNameInTable="cedulaColumn" msprop:Generator_ColumnVarNameInTable="columncedula" msprop:Generator_UserColumnName="cedula" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_UserColumnName="apellido" type="xs:string" minOccurs="0" />
+              <xs:element name="fechaNac" msprop:Generator_ColumnPropNameInRow="fechaNac" msprop:Generator_ColumnPropNameInTable="fechaNacColumn" msprop:Generator_ColumnVarNameInTable="columnfechaNac" msprop:Generator_UserColumnName="fechaNac" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="direccion" msprop:Generator_ColumnPropNameInRow="direccion" msprop:Generator_ColumnPropNameInTable="direccionColumn" msprop:Generator_ColumnVarNameInTable="columndireccion" msprop:Generator_UserColumnName="direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="ciudad" msprop:Generator_ColumnPropNameInRow="ciudad" msprop:Generator_ColumnPropNameInTable="ciudadColumn" msprop:Generator_ColumnVarNameInTable="columnciudad" msprop:Generator_UserColumnName="ciudad" type="xs:string" minOccurs="0" />
+              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email" type="xs:string" minOccurs="0" />
+              <xs:element name="estadociv" msprop:Generator_ColumnPropNameInRow="estadociv" msprop:Generator_ColumnPropNameInTable="estadocivColumn" msprop:Generator_ColumnVarNameInTable="columnestadociv" msprop:Generator_UserColumnName="estadociv" default="S" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="genero" msprop:Generator_ColumnPropNameInRow="genero" msprop:Generator_ColumnPropNameInTable="generoColumn" msprop:Generator_ColumnVarNameInTable="columngenero" msprop:Generator_UserColumnName="genero" default="M" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigocli" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="codigocli" msprop:Generator_ColumnPropNameInTable="codigocliColumn" msprop:Generator_ColumnVarNameInTable="columncodigocli" msprop:Generator_UserColumnName="codigocli" type="xs:int" />
+              <xs:element name="edad" msprop:Generator_ColumnPropNameInRow="edad" msprop:Generator_ColumnPropNameInTable="edadColumn" msprop:Generator_ColumnVarNameInTable="columnedad" msprop:Generator_UserColumnName="edad" type="xs:int" default="18" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Factura" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowEvArgName="FacturaRowChangeEvent" msprop:Generator_TablePropName="Factura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_RowClassName="FacturaRow" msprop:Generator_TableVarName="tableFactura" msprop:Generator_UserTableName="Factura">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigocli" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="codigocli" msprop:Generator_ColumnPropNameInTable="codigocliColumn" msprop:Generator_ColumnVarNameInTable="columncodigocli" msprop:Generator_UserColumnName="codigocli" type="xs:int" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_UserColumnName="total" type="xs:double" minOccurs="0" />
+              <xs:element name="codigoFact" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="codigoFact" msprop:Generator_ColumnPropNameInTable="codigoFactColumn" msprop:Generator_ColumnVarNameInTable="columncodigoFact" msprop:Generator_UserColumnName="codigoFact" type="xs:int" />
+              <xs:element name="fechacompra" msprop:Generator_ColumnPropNameInRow="fechacompra" msprop:Generator_ColumnPropNameInTable="fechacompraColumn" msprop:Generator_ColumnVarNameInTable="columnfechacompra" msprop:Generator_UserColumnName="fechacompra" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="ClienteKey1">
+      <xs:selector xpath=".//mstns:Cliente" />
+      <xs:field xpath="mstns:codigocli" />
+    </xs:unique>
+    <xs:unique name="FacturaKey1">
+      <xs:selector xpath=".//mstns:Factura" />
+      <xs:field xpath="mstns:codigoFact" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Cliente_Factura" msdata:parent="Cliente" msdata:child="Factura" msdata:parentkey="codigocli" msdata:childkey="codigocli" msprop:Generator_UserParentTable="Cliente" msprop:Generator_UserChildTable="Factura" msprop:Generator_RelationVarName="relationCliente_Factura" msprop:Generator_ChildPropName="GetFacturaRows" msprop:Generator_ParentPropName="ClienteRow" msprop:Generator_UserRelationName="Cliente_Factura" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,8 +47,11 @@
             this.btnBack = new System.Windows.Forms.PictureBox();
 
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
 
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -68,16 +74,40 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
 
+
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(886, 72);
 
             this.panel1.TabIndex = 10;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 31);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(560, 47);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "EcoVerde Market - Productos";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WinAppDiseños.Properties.Resources.Logo;
+            this.pictureBox6.Location = new System.Drawing.Point(1215, 5);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(99, 95);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
 
             this.label1.Location = new System.Drawing.Point(32, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -94,16 +124,31 @@
 
             this.panel6.Location = new System.Drawing.Point(0, 367);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(886, 72);
+            this.panel6.Size = new System.Drawing.Size(1329, 111);
             this.panel6.TabIndex = 19;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Image = global::WinAppDiseños.Properties.Resources.retroceder;
+            this.btnBack.Location = new System.Drawing.Point(64, 20);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 72);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 33;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.Location = new System.Drawing.Point(193, 270);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel2.Location = new System.Drawing.Point(278, 289);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel2.Name = "panel2";
+
             this.panel2.Size = new System.Drawing.Size(146, 4);
 
             this.panel2.TabIndex = 21;
@@ -113,6 +158,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
 
             this.label3.Location = new System.Drawing.Point(219, 277);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -183,7 +229,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "EcoVerde Market - Productos";
 
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -228,7 +273,7 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
+
 
             // btnBack
             // 
@@ -275,13 +320,17 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
 
+
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
             this.Name = "Reportes";
             this.Text = "Reportes";
+            this.Load += new System.EventHandler(this.Reportes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -289,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
 
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
