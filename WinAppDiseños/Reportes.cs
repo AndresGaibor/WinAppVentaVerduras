@@ -56,5 +56,11 @@ namespace WinAppDiseños
             ReporteCompraCliente rf = new ReporteCompraCliente();
             rf.Show();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ReporteClientesGenero reporteClientesGenero = new ReporteClientesGenero();
+            reporteClientesGenero.Show();
+        }
     }
 }
