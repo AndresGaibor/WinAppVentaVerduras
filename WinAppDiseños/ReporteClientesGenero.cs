@@ -26,7 +26,7 @@ namespace WinAppDiseños
 
         private void ReporteClientesGenero_Load(object sender, EventArgs e)
         {
-            this.dataSet11.leerXml();
+            this.dataSet1.leerXml();
             this.reportViewer1.RefreshReport();
         }
 
@@ -74,7 +74,7 @@ namespace WinAppDiseños
             try
             {
                 // Filter the Cliente data
-                DataTable originalTable1 = dataSet11.Tables["Cliente"];
+                DataTable originalTable1 = dataSet1.Tables["Cliente"];
                 DataView view1 = new DataView(originalTable1);
                 
                 view1.RowFilter = $"genero = '({genero})'";
@@ -86,18 +86,18 @@ namespace WinAppDiseños
 
                 // obtengo la lista de codigos de cliente que tiene el genero
                 List<string> codigoscli = new List<string>();
-                DataRow[] clientes = dataSet11.getClientesByGenero();
+                DataRow[] clientes = dataSet1.getClientesByGenero();
 
                 foreach(DataRow cliente in clientes)
                 {
                     codigoscli.Add(cliente["codigocli"].ToString());
-                    MessageBox.Show(cliente["codigocli"].ToString());
+                    
                 }
 
 
 
                 // Filter the Factura data
-                DataTable originalTable2 = dataSet11.Tables["Factura"];
+                DataTable originalTable2 = dataSet1.Tables["Factura"];
                 DataView view2 = new DataView(originalTable2);
 
                 string filterExpression = string.Join(" OR ", codigoscli.Select(c => $"codigocli = {c}"));
